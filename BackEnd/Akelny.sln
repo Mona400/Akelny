@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akelny", "Akelny\Akelny.csproj", "{4E77A96B-319C-4466-9382-5591EB548A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akelny.BLL", "Akelny.BLL\Akelny.BLL.csproj", "{38B0624E-2A55-4134-8F9E-FCEFAFE07832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akelny.DAL", "Akelny.DAL\Akelny.DAL.csproj", "{130AF520-1963-4E1A-878A-4B2AF3FA54E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E77A96B-319C-4466-9382-5591EB548A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E77A96B-319C-4466-9382-5591EB548A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E77A96B-319C-4466-9382-5591EB548A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E77A96B-319C-4466-9382-5591EB548A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B0624E-2A55-4134-8F9E-FCEFAFE07832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B0624E-2A55-4134-8F9E-FCEFAFE07832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B0624E-2A55-4134-8F9E-FCEFAFE07832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B0624E-2A55-4134-8F9E-FCEFAFE07832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130AF520-1963-4E1A-878A-4B2AF3FA54E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130AF520-1963-4E1A-878A-4B2AF3FA54E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130AF520-1963-4E1A-878A-4B2AF3FA54E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130AF520-1963-4E1A-878A-4B2AF3FA54E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91A6E642-79DA-4887-A667-78738FECC812}
+	EndGlobalSection
+EndGlobal
