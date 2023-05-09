@@ -11,9 +11,10 @@ namespace Akelny.BLL.Services.PromotionServices
     public interface IPromotionServices
     {
         List<PromotionDto> GetAll();
-        Promotion Add(PromotionDto department);
-        void Edit(int id, PromotionDto departmentDpo);
-
+        void Add(PromotionToAddDto promotionToAddDto);
+        void Edit(int id, PromotionToEditDto promotionToEditDto);
         void Delete(int id);
+        Promotion GetById(int id);
+
     }
 }

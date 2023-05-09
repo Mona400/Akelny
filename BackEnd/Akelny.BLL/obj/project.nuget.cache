@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hvcYNIAAW2KkWALAFd2S+j7Rz6CPXSuihWoQgwFZIjY6x0YelVcDK5tpfoAW4L/sziCfCsByW7ZFW4CIA5TLqw==",
+  "dgSpecHash": "TBuM0UhbZ+A5TQ9KQQi8bs8nNQMvAqGZloij33SWasgutaaPK+qLFuaaYWbCMXFv2+BA/7twKMr/thvTvcfERg==",
   "success": true,
-  "projectFilePath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\Akelny.BLL\\Akelny.BLL.csproj",
+  "projectFilePath": "G:\\CV_Project\\ITI_GraduationProject\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -11,6 +11,7 @@ namespace Akelny.DAL.Context
     public class ApplicationDbContext:DbContext
     {
          public DbSet<Promotion> Promotions { get; set; }
+        public DbSet<Section> Sections { get; set; }    
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

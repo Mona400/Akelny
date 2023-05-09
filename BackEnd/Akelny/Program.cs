@@ -1,7 +1,9 @@
 
 using Akelny.BLL.Services.PromotionServices;
+using Akelny.BLL.Services.SectionServices;
 using Akelny.DAL.Context;
 using Akelny.DAL.Repo.PromotionRepo;
+using Akelny.DAL.Repo.SectionRepo;
 using Akelny.DAL.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +30,7 @@ namespace Akelny
             #region Repos
 
             builder.Services.AddScoped<IPromotionRepo , PromotionRepo>();
+            builder.Services.AddScoped<ISectionRepo, SectionRepo>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             #endregion
@@ -35,6 +38,7 @@ namespace Akelny
             #region Services
 
             builder.Services.AddScoped<IPromotionServices, PromotionServices>();
+            builder.Services.AddScoped<ISectionServices, SectionServices>();
 
             #endregion
 

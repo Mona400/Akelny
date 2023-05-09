@@ -1,4 +1,5 @@
 ﻿using Akelny.DAL.Repo.PromotionRepo;
+using Akelny.DAL.Repo.SectionRepo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Akelny.DAL.UnitOfWork
     public interface IUnitOfWork
     {
         public IPromotionRepo PromotionRepo { get; }
+        public ISectionRepo SectionRepo { get;  }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Akelny.BLL.Dto.PromotionDto;
 using Akelny.BLL.Services.PromotionServices;
+using Akelny.DAL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,35 +22,42 @@ namespace Akelny.Controllers
             return _promotionServices.GetAll();
         }
         [HttpPost]
-        public ActionResult Add(PromotionDto promotionDto)
+        public ActionResult Add(PromotionToAddDto promotionDto)
         {
             _promotionServices.Add(promotionDto);
             return CreatedAtAction(
-                actionName: nameof(GetAll),
-                value: promotionDto);
+              actionName: nameof(GetAll),
+              value: "Added Successfully");
         }
         [HttpPut]
         [Route("{id}")]
-        public ActionResult Edit(int id, PromotionDto promotionDto)
+        public ActionResult Edit(int id, PromotionToEditDto promotionDto)
         {
-            if (promotionDto.Id != id) return NotFound(new { Message = "No promotion Found!!" });
+            if (promotionDto.Id != id) return NotFound(new { Message = "No Department Found!!" });
 
             _promotionServices.Edit(id, promotionDto);
             return CreatedAtAction(
-                actionName: nameof(GetAll),
-                value: "Updated Successfully");
+           actionName: nameof(GetAll),
+           value: "Updated Successfully");
+
         }
         [HttpDelete]
         [Route("{id}")]
-        public ActionResult Delete(int id, PromotionDto promotionDto)
+        public ActionResult<PromotionDto> Delete(int id, PromotionDto promotionDto)
         {
-            if (promotionDto.Id != id) return NotFound(new { Message = "No promotion Found!!" });
+            if (promotionDto.Id != id) return NotFound(new { Message = "No Department Found!!" });
 
             _promotionServices.Delete(id);
             return CreatedAtAction(
-                actionName: nameof(GetAll),
-                value: "Deleted Successfully");
+           actionName: nameof(GetAll),
+           value: "Deleted Successfully");
 
+        }
+        [HttpGet]
+        [Route("GetBy{id}")]
+        public ActionResult <Promotion> GetById(int id)
+        {
+            return _promotionServices.GetById(id);
         }
     }
 }

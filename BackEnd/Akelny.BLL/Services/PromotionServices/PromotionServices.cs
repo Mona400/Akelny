@@ -17,7 +17,7 @@ namespace Akelny.BLL.Services.PromotionServices
             _unitOfWork = unitOfWork;
         }
    
-        public Promotion Add(PromotionDto PromotionDto)
+        public void Add(PromotionToAddDto PromotionDto)
         {
             var promotion = new Promotion
             {
@@ -36,24 +36,25 @@ namespace Akelny.BLL.Services.PromotionServices
 
             _unitOfWork.PromotionRepo.Add(promotion);
             _unitOfWork.PromotionRepo.SaveChanges();
-
-            return promotion;
         }
+
+       
 
         public void Delete(int id)
         {
-           Promotion? promotion = _unitOfWork.PromotionRepo.GetById(id);
+            Promotion promotion = _unitOfWork.PromotionRepo.GetById(id);
 
-            if (promotion is null) { return; }
+            if (promotion == null) { return ; }
 
             _unitOfWork.PromotionRepo.Delete(promotion);
             _unitOfWork.PromotionRepo.SaveChanges();
+        
         }
 
-        public void Edit(int id, PromotionDto promotionDto)
+        public void Edit(int id, PromotionToEditDto promotionDto)
         {
-            Promotion? promotion = _unitOfWork.PromotionRepo.GetById(id);
-            if (promotion == null) { return; }
+            Promotion promotion = _unitOfWork.PromotionRepo.GetById(id);
+            if (promotion == null) { return ; }
 
             promotion.Title = promotionDto.Title;
             promotion.Description = promotionDto.Description;
@@ -67,6 +68,7 @@ namespace Akelny.BLL.Services.PromotionServices
 
             _unitOfWork.PromotionRepo.Update(promotion);
             _unitOfWork.PromotionRepo.SaveChanges();
+
         }
 
         public List<PromotionDto> GetAll()
@@ -75,7 +77,7 @@ namespace Akelny.BLL.Services.PromotionServices
             return Promotions
                 .Select(d => new PromotionDto
                 {
-                    Id = d.Id,
+                    Id=d.Id,
                     Description = d.Description,
                     Title= d.Title,
                     date=d.date,
@@ -92,6 +94,15 @@ namespace Akelny.BLL.Services.PromotionServices
                 .ToList();
         }
 
-       
+        public Promotion GetById(int id)
+        {
+            Promotion promotion = _unitOfWork.PromotionRepo.GetById(id);
+
+            if (promotion == null) { return null; }
+
+            _unitOfWork.PromotionRepo.GetById(id);
+            _unitOfWork.PromotionRepo.SaveChanges();
+            return promotion;
+        }
     }
 }

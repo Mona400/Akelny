@@ -1,4 +1,5 @@
 ﻿using Akelny.DAL.Repo.PromotionRepo;
+using Akelny.DAL.Repo.SectionRepo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,13 @@ namespace Akelny.DAL.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         public IPromotionRepo PromotionRepo { get; }
-        public UnitOfWork(IPromotionRepo promotionRepo)
+        public ISectionRepo SectionRepo { get; }
+      
+
+        public UnitOfWork(IPromotionRepo promotionRepo, ISectionRepo sectionRepo)
         {
             PromotionRepo = promotionRepo;
+            SectionRepo = sectionRepo;
            
         }
     }

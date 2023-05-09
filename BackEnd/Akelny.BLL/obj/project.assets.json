@@ -3279,11 +3279,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\Akelny.BLL\\Akelny.BLL.csproj",
+      "projectUniqueName": "G:\\CV_Project\\ITI_GraduationProject\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
       "projectName": "Akelny.BLL",
-      "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\Akelny.BLL\\Akelny.BLL.csproj",
+      "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
       "packagesPath": "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\",
-      "outputPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\Akelny.BLL\\obj\\",
+      "outputPath": "G:\\CV_Project\\ITI_GraduationProject\\BackEnd\\Akelny.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\COMPU FAYEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3300,8 +3300,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\Akelny.DAL\\Akelny.DAL.csproj": {
-              "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\Akelny.DAL\\Akelny.DAL.csproj"
+            "G:\\CV_Project\\ITI_GraduationProject\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+              "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
             }
           }
         }
