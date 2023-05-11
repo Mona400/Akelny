@@ -19,32 +19,61 @@ namespace Akelny.BLL.Services.SectionServices
             _unitOfWork = unitOfWork;
         }
 
-        public Section Add(SectionDto sectionDto)
+        public void Add(SectionToAddDto sectionDto)
         {
-            var Section = new Section
+            var section = new Section
             {
-                Name=sectionDto.Name,
-            };
+                Name= sectionDto.Name,
 
-            _unitOfWork.SectionRepo.Add(Section);
+            };
+            _unitOfWork.SectionRepo.Add(section);
+            _unitOfWork.SectionRepo.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            Section section = _unitOfWork.SectionRepo.GetById(id);
+            if(section == null) { return; }
+            if (section.Id != id)
+                return ;
+            _unitOfWork.SectionRepo.Delete(section);
+            _unitOfWork.SectionRepo.SaveChanges();
+        }
+
+        public void Edit(int id, SectionToEditDto sectionDto)
+        {
+            Section section = _unitOfWork.SectionRepo.GetById(id);
+            if (section == null) { return; }
+            if (section.Id != id)
+                return ;
+            section.Name = sectionDto.Name;
+            _unitOfWork.SectionRepo.Update(section);
+            _unitOfWork.SectionRepo.SaveChanges();
+        }
+
+        public List<SectionDto> GetAll()
+        {
+            List<Section> sections = _unitOfWork.SectionRepo.GetAll();
+            return sections.Select(s => new SectionDto
+            {
+                Id=s.Id,
+                Name=s.Name
+            }).ToList();
+           
+        }
+
+        public Section GetById(int id)
+        {
+            Section section = _unitOfWork.SectionRepo.GetById(id);
+            if (section == null)
+                return null;
+            if (section.Id != id)
+                return null;
+            _unitOfWork.SectionRepo.GetById(id);
             _unitOfWork.SectionRepo.SaveChanges();
 
-            return Section;
-        }
+            return section;  
 
-        public Section Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Section Edit(int id, SectionDto sectionDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Section> GetAll()
-        {
-            throw new NotImplementedException();
         }
     }
 }

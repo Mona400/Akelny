@@ -11,10 +11,10 @@ namespace Akelny.BLL.Services.SectionServices
 {
     public interface ISectionServices
     {
-        List<Section> GetAll();
-        Section Add(SectionDto sectionDto);
-        Section Edit(int id, SectionDto sectionDto);
-
-        Section Delete(int id);
+        List<SectionDto> GetAll();
+       void Add(SectionToAddDto sectionDto);
+       void Edit(int id, SectionToEditDto sectionDto);
+       void Delete(int id);
+      Section GetById(int id);
     }
 }
