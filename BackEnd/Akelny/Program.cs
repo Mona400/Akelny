@@ -1,9 +1,12 @@
 
+using Akelny.BLL.Services.MealServices;
 using Akelny.BLL.Services.PromotionServices;
+using Akelny.BLL.Services.ResturantServices;
 using Akelny.BLL.Services.SectionServices;
 using Akelny.DAL.Context;
 using Akelny.DAL.Repo.MealRepo;
 using Akelny.DAL.Repo.PromotionRepo;
+using Akelny.DAL.Repo.ResturantRepo;
 using Akelny.DAL.Repo.SectionRepo;
 using Akelny.DAL.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
@@ -34,15 +37,15 @@ namespace Akelny
             builder.Services.AddScoped<ISectionRepo, SectionRepo>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IMealRepo,MealRepo>();
-
+            builder.Services.AddScoped<IResturantRepo, ResturantRepo>();
             #endregion
 
             #region Services
 
             builder.Services.AddScoped<IPromotionServices, PromotionServices>();
             builder.Services.AddScoped<ISectionServices, SectionServices>();
-            builder.Services.AddScoped<IMealRepo, MealRepo>();
-
+            builder.Services.AddScoped<IMealServices, MealServices>();
+            builder.Services.AddScoped<IResturantServices, ResturantServices>();
             #endregion
 
 

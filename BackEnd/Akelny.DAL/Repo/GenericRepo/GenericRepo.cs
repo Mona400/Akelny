@@ -1,7 +1,10 @@
 ﻿using Akelny.DAL.Context;
+using Akelny.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,10 +14,11 @@ namespace Akelny.DAL.Repo.GenericRepo
     {
 
         private readonly ApplicationDbContext _context;
-
+        private readonly DbSet<T> _dbSet;
         public GenericRepo(ApplicationDbContext context)
         {
             _context = context;
+            _dbSet = context.Set<T>();
         }
         public List<T> GetAll()
         {
@@ -46,6 +50,18 @@ namespace Akelny.DAL.Repo.GenericRepo
         {
            var updateEntity= _context.Set<T>().Update(entity);
             _context.SaveChanges();
+        }
+
+        public List<Meal> GetAllWithIncludes(params Expression<Func<Meal, object>>[] includes)
+        {
+            IQueryable<Meal> query = (IQueryable<Meal>)_dbSet;
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return query.ToList();
         }
     }
 }

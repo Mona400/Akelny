@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Akelny.BLL.Dto.SectionDto
+namespace Akelny.BLL.Dto.SectionsDto
 {
     public class SectionToAddDto
     {

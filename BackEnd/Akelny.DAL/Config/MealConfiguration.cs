@@ -26,7 +26,7 @@ namespace Akelny.DAL.Config
 
             // Set foreign key relationships
             builder.HasOne(m => m.Restaurant)
-                .WithMany(r => r.Meal)
+                .WithMany(r => r.Meals)
                 .HasForeignKey(m => m.RestaurantId)
                 .OnDelete(DeleteBehavior.Cascade);
 

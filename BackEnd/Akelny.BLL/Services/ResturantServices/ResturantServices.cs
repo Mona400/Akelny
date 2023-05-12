@@ -1,0 +1,92 @@
+﻿using Akelny.BLL.Dto.PromotionDto;
+using Akelny.BLL.Dto.ResturantsDto;
+using Akelny.DAL.Models;
+using Akelny.DAL.UnitOfWork;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Akelny.BLL.Services.ResturantServices
+{
+    public class ResturantServices : IResturantServices
+    {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ResturantServices(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        public void Add(ResturantToAddDto resturantToAddDto)
+        {
+            var resturant = new Restaurant
+            {
+                Title = resturantToAddDto.Title,
+                Description = resturantToAddDto.Description,
+                //MealId = resturantToAddDto.MealId,
+                Rating = resturantToAddDto.Rating,
+                Speciality = resturantToAddDto.Speciality
+
+            };
+            _unitOfWork.ResturantRepo.Add(resturant);
+            _unitOfWork.ResturantRepo.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            Restaurant restaurant = _unitOfWork.ResturantRepo.GetById(id);
+
+            if (restaurant == null) { return; }
+
+            _unitOfWork.ResturantRepo.Delete(restaurant);
+            _unitOfWork.ResturantRepo.SaveChanges();
+        }
+
+        public void Edit(int id, ResturantToEditDto resturantToEditDto)
+        {
+            Restaurant restaurant = _unitOfWork.ResturantRepo.GetById(id);
+
+            if (restaurant == null) { return; }
+
+            restaurant.Id = resturantToEditDto.Id;
+            restaurant.Description = resturantToEditDto.Description;
+            restaurant.Title = resturantToEditDto.Title;
+            restaurant.Speciality = resturantToEditDto.Speciality;
+            restaurant.Rating = resturantToEditDto.Rating;
+
+            _unitOfWork.ResturantRepo.Update(restaurant);
+            _unitOfWork.ResturantRepo.SaveChanges();
+        }
+
+        public List<ResturantDto> GetAll()
+        {
+            List<Restaurant> restaurants = _unitOfWork.ResturantRepo.GetAll();
+            return restaurants.Select(r => new ResturantDto
+            {
+                Id = r.Id,
+                Description = r.Description,
+                Rating = r.Rating,
+                Speciality = r.Speciality,
+                Title = r.Title
+
+            }).ToList();
+        }
+
+        public ResturantDto GetById(int id)
+        {
+            Restaurant restaurant = _unitOfWork.ResturantRepo.GetResturantById(id);
+
+            if (restaurant == null) { return null; }
+            var resturantDto = new ResturantDto();
+            resturantDto.Id = restaurant.Id;
+            resturantDto.Title = restaurant.Title;
+            resturantDto.Description = restaurant.Description;
+            resturantDto.Rating = restaurant.Rating;
+            resturantDto.Speciality = restaurant.Speciality;
+            return resturantDto;
+        }
+    }
+}
+

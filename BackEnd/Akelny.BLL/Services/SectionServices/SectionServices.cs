@@ -1,5 +1,6 @@
 ﻿using Akelny.BLL.Dto.PromotionDto;
-using Akelny.BLL.Dto.SectionDto;
+using Akelny.BLL.Dto.ResturantsDto;
+using Akelny.BLL.Dto.SectionsDto;
 using Akelny.DAL.Models;
 using Akelny.DAL.UnitOfWork;
 using System;
@@ -62,17 +63,16 @@ namespace Akelny.BLL.Services.SectionServices
            
         }
 
-        public Section GetById(int id)
+        public SectionDto GetById(int id)
         {
             Section section = _unitOfWork.SectionRepo.GetById(id);
-            if (section == null)
-                return null;
-            if (section.Id != id)
-                return null;
-            _unitOfWork.SectionRepo.GetById(id);
-            _unitOfWork.SectionRepo.SaveChanges();
 
-            return section;  
+            if (section == null) { return null; }
+            var sectionDto = new SectionDto();
+            sectionDto.Id = section.Id;
+            sectionDto.Name = section.Name;
+          
+            return sectionDto;
 
         }
     }

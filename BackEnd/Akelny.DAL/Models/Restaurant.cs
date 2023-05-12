@@ -17,7 +17,10 @@ namespace Akelny.DAL.Models
         public string Speciality { get; set; } = string.Empty;
        
         public decimal ?Rating { get; set; }
-        public ICollection<Meal>? Meal { get; set; } = new HashSet<Meal>();
+        //public int MealId { get; set; }
+        //public int SectionId { get; set; }
+        public ICollection<Meal>? Meals { get; set; } = new HashSet<Meal>();
+        public ICollection<Section>? Sections { get; set; } = new HashSet<Section>();
 
     }
 }

@@ -65,7 +65,25 @@ namespace Akelny.DAL.Migrations
                             Name = "Meal Name1",
                             Price = 120.2m,
                             RestaurantId = 1,
-                            SectionId = 4
+                            SectionId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Meal Des2",
+                            Name = "Meal Name2",
+                            Price = 120.2m,
+                            RestaurantId = 1,
+                            SectionId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Meal Des3",
+                            Name = "Meal Name3",
+                            Price = 120.2m,
+                            RestaurantId = 1,
+                            SectionId = 1
                         });
                 });
 
@@ -150,6 +168,22 @@ namespace Akelny.DAL.Migrations
                             Rating = 10.2m,
                             Speciality = "Speciality1",
                             Title = "Title1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Description2",
+                            Rating = 10.2m,
+                            Speciality = "Speciality2",
+                            Title = "Title2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Description3",
+                            Rating = 10.2m,
+                            Speciality = "Speciality3",
+                            Title = "Title3"
                         });
                 });
 
@@ -169,12 +203,44 @@ namespace Akelny.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sections", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Breakfast"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Dinner"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Lunch"
+                        });
+                });
+
+            modelBuilder.Entity("RestaurantSection", b =>
+                {
+                    b.Property<int>("RestaurantId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SectionsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RestaurantId", "SectionsId");
+
+                    b.HasIndex("SectionsId");
+
+                    b.ToTable("RestaurantSection");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
                 {
                     b.HasOne("Akelny.DAL.Models.Restaurant", "Restaurant")
-                        .WithMany("Meal")
+                        .WithMany("Meals")
                         .HasForeignKey("RestaurantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -190,9 +256,24 @@ namespace Akelny.DAL.Migrations
                     b.Navigation("Section");
                 });
 
+            modelBuilder.Entity("RestaurantSection", b =>
+                {
+                    b.HasOne("Akelny.DAL.Models.Restaurant", null)
+                        .WithMany()
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Akelny.DAL.Models.Section", null)
+                        .WithMany()
+                        .HasForeignKey("SectionsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Akelny.DAL.Models.Restaurant", b =>
                 {
-                    b.Navigation("Meal");
+                    b.Navigation("Meals");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>

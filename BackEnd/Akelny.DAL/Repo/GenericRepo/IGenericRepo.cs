@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Akelny.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,5 +17,6 @@ namespace Akelny.DAL.Repo.GenericRepo
         void Delete(T entity);
 
         int SaveChanges();
+        public List<Meal> GetAllWithIncludes(params Expression<Func<Meal, object>>[] includes);
     }
 }

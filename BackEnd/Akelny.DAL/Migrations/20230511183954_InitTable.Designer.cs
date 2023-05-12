@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Akelny.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230510184606_ResturantAndMeal")]
-    partial class ResturantAndMeal
+    [Migration("20230511183954_InitTable")]
+    partial class InitTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,10 +39,12 @@ namespace Akelny.DAL.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<decimal?>("Price")
+                        .IsRequired()
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("RestaurantId")
                         .HasColumnType("int");
@@ -56,7 +58,36 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("SectionId");
 
-                    b.ToTable("Meals");
+                    b.ToTable("Meals", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Meal Des1",
+                            Name = "Meal Name1",
+                            Price = 120.2m,
+                            RestaurantId = 1,
+                            SectionId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Meal Des2",
+                            Name = "Meal Name2",
+                            Price = 120.2m,
+                            RestaurantId = 1,
+                            SectionId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Meal Des3",
+                            Name = "Meal Name3",
+                            Price = 120.2m,
+                            RestaurantId = 1,
+                            SectionId = 1
+                        });
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Promotion", b =>
@@ -117,8 +148,14 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Rating")
+                    b.Property<int>("MealId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("Rating")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("SectionId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Speciality")
                         .IsRequired()
@@ -131,6 +168,38 @@ namespace Akelny.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Restaurant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Description1",
+                            MealId = 0,
+                            Rating = 10.2m,
+                            SectionId = 0,
+                            Speciality = "Speciality1",
+                            Title = "Title1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Description2",
+                            MealId = 0,
+                            Rating = 10.2m,
+                            SectionId = 0,
+                            Speciality = "Speciality2",
+                            Title = "Title2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Description3",
+                            MealId = 0,
+                            Rating = 10.2m,
+                            SectionId = 0,
+                            Speciality = "Speciality3",
+                            Title = "Title3"
+                        });
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>
@@ -141,25 +210,54 @@ namespace Akelny.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("MealId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("RestaurantId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sections");
+                    b.HasIndex("RestaurantId");
+
+                    b.ToTable("Sections", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            MealId = 0,
+                            Name = "Breakfast"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            MealId = 0,
+                            Name = "Dinner"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            MealId = 0,
+                            Name = "Lunch"
+                        });
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
                 {
                     b.HasOne("Akelny.DAL.Models.Restaurant", "Restaurant")
-                        .WithMany("Meal")
+                        .WithMany("Meals")
                         .HasForeignKey("RestaurantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Akelny.DAL.Models.Section", "Section")
-                        .WithMany()
+                        .WithMany("Meals")
                         .HasForeignKey("SectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -169,9 +267,25 @@ namespace Akelny.DAL.Migrations
                     b.Navigation("Section");
                 });
 
+            modelBuilder.Entity("Akelny.DAL.Models.Section", b =>
+                {
+                    b.HasOne("Akelny.DAL.Models.Restaurant", "Restaurant")
+                        .WithMany("Sections")
+                        .HasForeignKey("RestaurantId");
+
+                    b.Navigation("Restaurant");
+                });
+
             modelBuilder.Entity("Akelny.DAL.Models.Restaurant", b =>
                 {
-                    b.Navigation("Meal");
+                    b.Navigation("Meals");
+
+                    b.Navigation("Sections");
+                });
+
+            modelBuilder.Entity("Akelny.DAL.Models.Section", b =>
+                {
+                    b.Navigation("Meals");
                 });
 #pragma warning restore 612, 618
         }

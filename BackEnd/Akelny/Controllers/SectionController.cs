@@ -1,5 +1,5 @@
 ﻿using Akelny.BLL.Dto.PromotionDto;
-using Akelny.BLL.Dto.SectionDto;
+using Akelny.BLL.Dto.SectionsDto;
 using Akelny.BLL.Services.SectionServices;
 using Akelny.DAL.Models;
 using Microsoft.AspNetCore.Http;
@@ -56,7 +56,7 @@ namespace Akelny.Controllers
         }
         [HttpGet]
         [Route("GetBy{id}")]
-        public ActionResult<Section> GetById(int id)
+        public ActionResult<SectionDto> GetById(int id)
         {
             return _sectionServices.GetById(id);
         }

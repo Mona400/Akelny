@@ -1,5 +1,6 @@
 ﻿using Akelny.DAL.Repo.MealRepo;
 using Akelny.DAL.Repo.PromotionRepo;
+using Akelny.DAL.Repo.ResturantRepo;
 using Akelny.DAL.Repo.SectionRepo;
 using System;
 using System.Collections.Generic;
@@ -14,5 +15,6 @@ namespace Akelny.DAL.UnitOfWork
         public IPromotionRepo PromotionRepo { get; }
         public ISectionRepo SectionRepo { get;  }
         public IMealRepo MealRepo { get; }
+        public IResturantRepo ResturantRepo { get; }
     }
 }

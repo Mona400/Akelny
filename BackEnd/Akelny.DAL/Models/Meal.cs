@@ -16,8 +16,10 @@ namespace Akelny.DAL.Models
         //public string Image { get; set; } = string.Empty;
        
         public decimal? Price { get; set; }
+        [ForeignKey("Restaurant")]
         public int RestaurantId { get; set; }
         public Restaurant ?Restaurant { get; set; }
+        [ForeignKey("Section")]
         public int SectionId { get; set; }
         public Section ?Section { get; set; }
       

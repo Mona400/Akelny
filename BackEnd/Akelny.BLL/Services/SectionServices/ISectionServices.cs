@@ -1,5 +1,5 @@
 ﻿using Akelny.BLL.Dto.PromotionDto;
-using Akelny.BLL.Dto.SectionDto;
+using Akelny.BLL.Dto.SectionsDto;
 using Akelny.DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +15,6 @@ namespace Akelny.BLL.Services.SectionServices
        void Add(SectionToAddDto sectionDto);
        void Edit(int id, SectionToEditDto sectionDto);
        void Delete(int id);
-      Section GetById(int id);
+        public SectionDto GetById(int id);
     }
 }
