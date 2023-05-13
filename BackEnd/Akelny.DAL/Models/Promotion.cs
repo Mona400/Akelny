@@ -18,7 +18,11 @@ namespace Akelny.DAL.Models
     public int Minutes { get; set; }
     public int Seconds { get; set; }
     public string ImageUrl { get; set; } = string.Empty;
+
+    [Column(TypeName = "decimal(8,2)")]
     public decimal PriceBefore { get; set; }
+
+    [Column(TypeName = "decimal(8,2)")]
     public decimal PriceAfter { get; set; }
     //[NotMapped]
     //public IFormFile? ImageFile { get; set; }

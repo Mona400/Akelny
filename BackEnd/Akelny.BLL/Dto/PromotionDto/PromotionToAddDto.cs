@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace Akelny.BLL.Dto.PromotionDto
     {
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+
+        public IFormFile? Image { get; set; }
         public DateTime date { get; set; }
         public int days { get; set; }
         public int Hours { get; set; }
