@@ -71,7 +71,9 @@ public class SubService : ISubService
 
     public List<SubsWithUser_Meals> GetAll()
     {
-        return _unitOfWork.Subrepo.GetAllSubs().Select(en => new SubsWithUser_Meals
+        
+            
+          return _unitOfWork.Subrepo.GetAllSubs().Select(en => new SubsWithUser_Meals
         {
             Id = en.Id,
             Monthly_price = en.Monthly_Price,

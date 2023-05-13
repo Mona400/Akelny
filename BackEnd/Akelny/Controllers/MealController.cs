@@ -27,7 +27,7 @@ namespace Akelny.Controllers
             return _mealServices.GetAll();
         }
         [HttpPost]
-        public ActionResult Add(MealToAddDto mealToAddDto)
+        public ActionResult Add([FromForm] MealToAddDto mealToAddDto)
         {
            _mealServices.AddMeal(mealToAddDto);
             
@@ -49,7 +49,7 @@ namespace Akelny.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public ActionResult Edit(int id, MealToEditDto mealToEditDto)
+        public ActionResult Edit(int id,[FromForm] MealToEditDto mealToEditDto)
         {
             if (mealToEditDto.Id != id) return NotFound(new { Message = "No Resturant Found!!" });
             _mealServices.Edit(id, mealToEditDto);

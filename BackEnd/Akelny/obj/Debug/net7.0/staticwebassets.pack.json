@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\New folder\\Akelny\\BackEnd\\Akelny\\wwwroot\\507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
+      "PackagePath": "staticwebassets\\507a9056-bf91-4616-8036-f8443aaf41d7.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Akelny.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Akelny.props",
+      "PackagePath": "build\\Akelny.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Akelny.props",
+      "PackagePath": "buildMultiTargeting\\Akelny.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Akelny.props",
+      "PackagePath": "buildTransitive\\Akelny.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

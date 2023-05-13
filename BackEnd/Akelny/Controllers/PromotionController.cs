@@ -22,7 +22,7 @@ namespace Akelny.Controllers
             return _promotionServices.GetAll();
         }
         [HttpPost]
-        public ActionResult Add(PromotionToAddDto promotionDto)
+        public ActionResult Add([FromForm] PromotionToAddDto promotionDto)
         {
             _promotionServices.Add(promotionDto);
             return CreatedAtAction(
@@ -31,7 +31,7 @@ namespace Akelny.Controllers
         }
         [HttpPut]
         [Route("{id}")]
-        public ActionResult Edit(int id, PromotionToEditDto promotionDto)
+        public ActionResult Edit(int id, [FromForm] PromotionToEditDto promotionDto)
         {
             if (promotionDto.Id != id) return NotFound(new { Message = "No Department Found!!" });
 

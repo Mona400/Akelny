@@ -20,17 +20,17 @@ public class SubRepo : GenericRepo<Subscriptions>, ISubRepo
 
     public List<Subscriptions> GetAllSubs()
     {
-       return _context.Subscriptions.Include(en => en.Meals_Dates).ToList();
+       return _context.Subscriptions.Include(en => en.user).Include(en => en.Meals_Dates).ToList();
     }
 
     public Subscriptions? GetSubByID(int Subid)
     {
-        return _context.Subscriptions.FirstOrDefault(en => en.Id == Subid);
+        return _context.Subscriptions.Include(en => en.user).Include(en => en.Meals_Dates)!.ThenInclude(en => en.meal).FirstOrDefault(en => en.Id == Subid);
     }
 
     public List<Subscriptions> GetSubsByUserID(int userID)
     {
-        return _context.Subscriptions.Where(en => en.TestUserID == userID).Include(en => en.Meals_Dates).ToList();
+        return _context.Subscriptions.Where(en => en.TestUserID == userID).Include(en => en.user).Include(en => en.Meals_Dates).ToList();
     }
 
 
