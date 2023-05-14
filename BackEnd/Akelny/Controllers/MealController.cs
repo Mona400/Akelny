@@ -26,6 +26,12 @@ namespace Akelny.Controllers
         {
             return _mealServices.GetAll();
         }
+        [HttpGet("top-four")]
+        public ActionResult<IList<MealDto>> GetTopFourMeals()
+        {
+            var topMeals = _mealServices.GetTopFourMeals();
+            return Ok(topMeals);
+        }
         [HttpPost]
         public ActionResult Add([FromForm] MealToAddDto mealToAddDto)
         {

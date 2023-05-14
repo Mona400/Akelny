@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Akelny.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class Subscription : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {}
+    "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {}
   },
   "projects": {
-    "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+    "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
+        "projectUniqueName": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
         "projectName": "Akelny.DAL",
-        "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
-        "packagesPath": "C:\\Users\\mahmo\\.nuget\\packages\\",
-        "outputPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\obj\\",
+        "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
+        "packagesPath": "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\",
+        "outputPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mahmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\COMPU FAYEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "net7.0": {
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

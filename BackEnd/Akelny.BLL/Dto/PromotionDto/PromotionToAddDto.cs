@@ -18,7 +18,6 @@ namespace Akelny.BLL.Dto.PromotionDto
         public int Hours { get; set; }
         public int Minutes { get; set; }
         public int Seconds { get; set; }
-        public string ImageUrl { get; set; } = string.Empty;
         public decimal PriceBefore { get; set; }
         public decimal PriceAfter { get; set; }
     }

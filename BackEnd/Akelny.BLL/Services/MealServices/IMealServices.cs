@@ -15,6 +15,7 @@ namespace Akelny.BLL.Services.MealServices
       
       
         List<MealDto> GetAll();
+        List<MealDto> GetTopFourMeals();
         void AddMeal(MealToAddDto mealToAddDto);
         List<MealResturantDto> GetAllByResturantId(int? ResturantId);
         List<MealSectionDto> GetAllBySectionId(int? SectionId);

@@ -151,8 +151,22 @@ namespace Akelny.BLL.Services.MealServices
             _unitOfWork.MealRepo.SaveChanges();
         }
 
+        public List<MealDto> GetTopFourMeals()
+        {
+            var meals = _unitOfWork.MealRepo.GetAll();
 
+            return meals.Select(m => new MealDto
+            {
+                Id = m.Id,
+                Description = m.Description,
+                Name = m.Name,
+                Image = m.Image,
+                Price = m.Price,
+                RestaurantId = m.RestaurantId,
+                SectionId = m.SectionId,
 
+            }).OrderBy(m => m.Price).Take(4).ToList();
+        }
     }
 
 

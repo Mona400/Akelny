@@ -43,3 +43,18 @@ F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Ak
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
+G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll

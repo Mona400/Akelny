@@ -19,6 +19,7 @@ namespace Akelny.BLL.Services.PromotionServices
    
         public void Add(PromotionToAddDto PromotionDto)
         {
+            var newName = _unitOfWork.SaveImageMethod(PromotionDto.Image);
 
             var promotion = new Promotion
             {
@@ -32,7 +33,7 @@ namespace Akelny.BLL.Services.PromotionServices
                 Seconds = PromotionDto.Seconds,
                 PriceAfter = PromotionDto.PriceAfter,
                 PriceBefore = PromotionDto.PriceBefore,
-                ImageUrl = PromotionDto.ImageUrl,
+                ImageUrl=newName
             };
 
             _unitOfWork.PromotionRepo.Add(promotion);
@@ -54,6 +55,7 @@ namespace Akelny.BLL.Services.PromotionServices
 
         public void Edit(int id, PromotionToEditDto promotionDto)
         {
+            var newName = _unitOfWork.SaveImageMethod(promotionDto.Image);
             Promotion promotion = _unitOfWork.PromotionRepo.GetById(id);
             if (promotion == null) { return ; }
 
@@ -66,7 +68,7 @@ namespace Akelny.BLL.Services.PromotionServices
             promotion.Seconds = promotionDto.Seconds;
             promotion.PriceBefore = promotionDto.PriceBefore;
             promotion.PriceAfter = promotionDto.PriceAfter;
-
+            promotion.ImageUrl = newName;
             _unitOfWork.PromotionRepo.Update(promotion);
             _unitOfWork.PromotionRepo.SaveChanges();
 
@@ -88,7 +90,7 @@ namespace Akelny.BLL.Services.PromotionServices
                     Seconds= d.Seconds,
                     PriceAfter= d.PriceAfter,
                     PriceBefore= d.PriceBefore,
-                    ImageUrl= d.ImageUrl,
+                 
                     
 
                 })
