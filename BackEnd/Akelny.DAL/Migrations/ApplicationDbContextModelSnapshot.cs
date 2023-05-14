@@ -34,6 +34,10 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -62,6 +66,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 1,
                             Description = "Meal Des1",
+                            Image = "",
                             Name = "Meal Name1",
                             Price = 120.2m,
                             RestaurantId = 1,
@@ -71,6 +76,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 2,
                             Description = "Meal Des2",
+                            Image = "",
                             Name = "Meal Name2",
                             Price = 120.2m,
                             RestaurantId = 1,
@@ -80,10 +86,49 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 3,
                             Description = "Meal Des3",
+                            Image = "",
                             Name = "Meal Name3",
                             Price = 120.2m,
                             RestaurantId = 1,
                             SectionId = 1
+                        });
+                });
+
+            modelBuilder.Entity("Akelny.DAL.Models.Meals_Dates", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MealID")
+                        .HasColumnType("int")
+                        .HasColumnName("Meal_ID");
+
+                    b.Property<int>("SubscriptionsID")
+                        .HasColumnType("int")
+                        .HasColumnName("Sub_ID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("MealID");
+
+                    b.HasIndex("SubscriptionsID");
+
+                    b.ToTable("Meals_and_Dates");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Date = "15:00 AM",
+                            MealID = 1,
+                            SubscriptionsID = 1
                         });
                 });
 
@@ -110,10 +155,10 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("PriceAfter")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(8,2)");
 
                     b.Property<decimal>("PriceBefore")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(8,2)");
 
                     b.Property<int>("Seconds")
                         .HasColumnType("int");
@@ -146,7 +191,7 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("Rating")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(8,2)");
 
                     b.Property<string>("Speciality")
                         .IsRequired()
@@ -222,6 +267,81 @@ namespace Akelny.DAL.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Monthly_Price")
+                        .HasColumnType("decimal(9,2)");
+
+                    b.Property<DateTime>("RenewDate")
+                        .HasColumnType("datetime2(0)");
+
+                    b.Property<int>("Substate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TestUserID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TimeCreated")
+                        .HasColumnType("datetime2(0)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TestUserID");
+
+                    b.ToTable("Subscriptions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Monthly_Price = 59.99m,
+                            RenewDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Substate = 0,
+                            TestUserID = 1,
+                            TimeCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("Akelny.DAL.Models.TestUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TestUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Username = "mahmoud1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Username = "mahmoud2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Username = "mahmoud3"
+                        });
+                });
+
             modelBuilder.Entity("RestaurantSection", b =>
                 {
                     b.Property<int>("RestaurantId")
@@ -256,6 +376,36 @@ namespace Akelny.DAL.Migrations
                     b.Navigation("Section");
                 });
 
+            modelBuilder.Entity("Akelny.DAL.Models.Meals_Dates", b =>
+                {
+                    b.HasOne("Akelny.DAL.Models.Meal", "meal")
+                        .WithMany()
+                        .HasForeignKey("MealID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Akelny.DAL.Models.Subscriptions", "Subscriptions")
+                        .WithMany("Meals_Dates")
+                        .HasForeignKey("SubscriptionsID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subscriptions");
+
+                    b.Navigation("meal");
+                });
+
+            modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
+                {
+                    b.HasOne("Akelny.DAL.Models.TestUser", "user")
+                        .WithMany()
+                        .HasForeignKey("TestUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("user");
+                });
+
             modelBuilder.Entity("RestaurantSection", b =>
                 {
                     b.HasOne("Akelny.DAL.Models.Restaurant", null)
@@ -279,6 +429,11 @@ namespace Akelny.DAL.Migrations
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>
                 {
                     b.Navigation("Meals");
+                });
+
+            modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
+                {
+                    b.Navigation("Meals_Dates");
                 });
 #pragma warning restore 612, 618
         }

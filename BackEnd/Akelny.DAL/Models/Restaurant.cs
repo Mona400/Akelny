@@ -15,7 +15,8 @@ namespace Akelny.DAL.Models
         public string Description { get; set; } = string.Empty;
         //public string Image { get; set; }
         public string Speciality { get; set; } = string.Empty;
-       
+
+        [Column(TypeName = "decimal(8,2)")]
         public decimal ?Rating { get; set; }
         //public int MealId { get; set; }
         //public int SectionId { get; set; }

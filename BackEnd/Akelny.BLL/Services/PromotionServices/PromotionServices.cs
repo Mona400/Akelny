@@ -19,6 +19,7 @@ namespace Akelny.BLL.Services.PromotionServices
    
         public void Add(PromotionToAddDto PromotionDto)
         {
+
             var promotion = new Promotion
             {
                

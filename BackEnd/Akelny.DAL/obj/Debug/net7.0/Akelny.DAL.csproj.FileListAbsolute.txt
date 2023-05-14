@@ -26,3 +26,17 @@ G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\refint\A
 G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
 G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
 G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
