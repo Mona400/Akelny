@@ -66,6 +66,7 @@ namespace Akelny.BLL.Services.MealServices
                 Name = m.Name,
                 Description = m.Description,
                 Price = m.Price,
+                Image = m.Image,
                 Id = m.Id,
                 Restaurant = m.Restaurant != null ? new ResturantDto
                 {
@@ -91,7 +92,7 @@ namespace Akelny.BLL.Services.MealServices
                 Description = m.Description,
                 Price = m.Price,
                 Id = m.Id,
-
+                Image = m.Image,
                 SectionId = m.SectionId,
                 Section = new SectionDto
                 {
@@ -112,6 +113,7 @@ namespace Akelny.BLL.Services.MealServices
             MealDto.Price = meal.Price;
             MealDto.Name = meal.Name;
             MealDto.SectionId = meal.SectionId;
+            MealDto.Image = meal.Image;
             MealDto.RestaurantId = meal.RestaurantId;
 
             return MealDto;

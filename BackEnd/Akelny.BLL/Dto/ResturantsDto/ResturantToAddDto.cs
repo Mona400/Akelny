@@ -1,4 +1,5 @@
 ﻿using Akelny.DAL.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Akelny.BLL.Dto.ResturantsDto
     {
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        //public string Image { get; set; }
+        public IFormFile? Image { get; set; }
         public string Speciality { get; set; } = string.Empty;
         public decimal? Rating { get; set; }
         //public int MealId { get; set; }

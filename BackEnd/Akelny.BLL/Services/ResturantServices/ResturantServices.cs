@@ -1,4 +1,5 @@
-﻿using Akelny.BLL.Dto.PromotionDto;
+﻿using Akelny.BLL.Dto.MealDto;
+using Akelny.BLL.Dto.PromotionDto;
 using Akelny.BLL.Dto.ResturantsDto;
 using Akelny.DAL.Models;
 using Akelny.DAL.UnitOfWork;
@@ -21,13 +22,15 @@ namespace Akelny.BLL.Services.ResturantServices
 
         public void Add(ResturantToAddDto resturantToAddDto)
         {
+            var newName = _unitOfWork.SaveImageMethod(resturantToAddDto.Image!);
             var resturant = new Restaurant
             {
                 Title = resturantToAddDto.Title,
                 Description = resturantToAddDto.Description,
                 //MealId = resturantToAddDto.MealId,
                 Rating = resturantToAddDto.Rating,
-                Speciality = resturantToAddDto.Speciality
+                Speciality = resturantToAddDto.Speciality,
+                Image=newName,
 
             };
             _unitOfWork.ResturantRepo.Add(resturant);
@@ -47,6 +50,12 @@ namespace Akelny.BLL.Services.ResturantServices
         public void Edit(int id, ResturantToEditDto resturantToEditDto)
         {
             Restaurant restaurant = _unitOfWork.ResturantRepo.GetById(id);
+            var newName = "";
+            if (resturantToEditDto.Image is not null)
+            {
+                newName = _unitOfWork.SaveImageMethod(resturantToEditDto.Image!);
+
+            }
 
             if (restaurant == null) { return; }
 
@@ -55,6 +64,7 @@ namespace Akelny.BLL.Services.ResturantServices
             restaurant.Title = resturantToEditDto.Title;
             restaurant.Speciality = resturantToEditDto.Speciality;
             restaurant.Rating = resturantToEditDto.Rating;
+            restaurant.Image = newName;
 
             _unitOfWork.ResturantRepo.Update(restaurant);
             _unitOfWork.ResturantRepo.SaveChanges();
@@ -69,7 +79,8 @@ namespace Akelny.BLL.Services.ResturantServices
                 Description = r.Description,
                 Rating = r.Rating,
                 Speciality = r.Speciality,
-                Title = r.Title
+                Title = r.Title,
+               Image=r.Image
 
             }).ToList();
         }
@@ -85,6 +96,7 @@ namespace Akelny.BLL.Services.ResturantServices
             resturantDto.Description = restaurant.Description;
             resturantDto.Rating = restaurant.Rating;
             resturantDto.Speciality = restaurant.Speciality;
+            resturantDto.Image = restaurant.Image;
             return resturantDto;
         }
     }

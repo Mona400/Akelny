@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NQ2dvLARt97SJWMcHfdJtzFwYeL1/6ojxs0caTtZmxI=",
+  "Hash": "r8dxGxTg4Nd3vKOiNQ/MZW3FKpfNgiduvihxJHYDM3g=",
   "Source": "Akelny",
   "BasePath": "_content/Akelny",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "wwwroot\\349e4d73-c73c-4e3a-b080-98986376aecd.png"
     },
     {
+      "Identity": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\4018d117-63c5-43a6-8dc6-006dd95c022b.png",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "4018d117-63c5-43a6-8dc6-006dd95c022b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\4018d117-63c5-43a6-8dc6-006dd95c022b.png"
+    },
+    {
       "Identity": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
       "SourceId": "Akelny",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\507a9056-bf91-4616-8036-f8443aaf41d7.jpg"
+    },
+    {
+      "Identity": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\59659d37-ce37-48b7-952a-baeb1feabc69.png",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "59659d37-ce37-48b7-952a-baeb1feabc69.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\59659d37-ce37-48b7-952a-baeb1feabc69.png"
     },
     {
       "Identity": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\59cda4b7-6ea9-4bc0-affd-9b41f34626e7.png",
@@ -202,6 +236,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\c6b966c8-6511-48f4-9ad8-672546ca8836.png"
+    },
+    {
+      "Identity": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\d3fa27a8-349c-4284-86b9-1888818db095.png",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "d3fa27a8-349c-4284-86b9-1888818db095.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\d3fa27a8-349c-4284-86b9-1888818db095.png"
+    },
+    {
+      "Identity": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\e6252ff7-05c9-4781-b997-a1bb77f837d1.png",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "e6252ff7-05c9-4781-b997-a1bb77f837d1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\e6252ff7-05c9-4781-b997-a1bb77f837d1.png"
     }
   ]
 }
