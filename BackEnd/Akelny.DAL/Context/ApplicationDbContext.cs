@@ -1,5 +1,6 @@
 ﻿using Akelny.DAL.Config;
 using Akelny.DAL.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,10 @@ using System.Threading.Tasks;
 
 namespace Akelny.DAL.Context
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext:IdentityDbContext
     {
-         public DbSet<Promotion> Promotions { get; set; }
+        
+        public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Section> Sections { get; set; }    
         public DbSet<Restaurant> Restaurant { get; set; }
         public DbSet<Meal> Meals { get; set; }
@@ -22,6 +24,8 @@ namespace Akelny.DAL.Context
         public DbSet<Meals_Dates> Meals_and_Dates { get; set; }
 
         public DbSet<Subscriptions> Subscriptions { get; set; }
+
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

@@ -11,7 +11,12 @@ using Akelny.DAL.Repo.ResturantRepo;
 using Akelny.DAL.Repo.SectionRepo;
 using Akelny.DAL.Repo.SubRepo;
 using Akelny.DAL.UnitOfWork;
+using Akelny.Helper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Identity;
 
 namespace Akelny
 {
@@ -33,6 +38,40 @@ namespace Akelny
             builder.Services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(con));
             #endregion
 
+            #region JWTConfig
+            builder.Services.Configure<JWT>(builder.Configuration.GetSection(key: "JWTConfig"));
+            var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection(key: "JWTConfig:Secret").Value);
+            var tokenValidationParameter= new TokenValidationParameters()
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = false,//for dev
+                ValidateAudience = false,//for dev
+                RequireExpirationTime = false,//for dev -->need to update after refresh toked added
+                ValidateLifetime = true
+
+            };
+            #endregion
+
+            #region JWT Services
+            builder.Services.AddAuthentication(options=>{
+                options.DefaultAuthenticateScheme=JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+
+            .AddJwtBearer(jwt =>
+            {
+               
+                jwt.SaveToken = true;
+                jwt.TokenValidationParameters = tokenValidationParameter;
+            });
+
+            builder.Services.AddSingleton(tokenValidationParameter);
+            //builder.Services.def<IdentityUser>();
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+         .AddEntityFrameworkStores<ApplicationDbContext>();
+            #endregion
             #region Repos
 
             builder.Services.AddScoped<IPromotionRepo , PromotionRepo>();
@@ -67,6 +106,7 @@ namespace Akelny
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseStaticFiles();
