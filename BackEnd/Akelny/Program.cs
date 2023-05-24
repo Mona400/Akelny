@@ -17,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
+using Akelny.DAL.Models;
 
 namespace Akelny
 {
@@ -36,6 +37,8 @@ namespace Akelny
             #region Database
             var con = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(con));
+          //
+            builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             #endregion
 
             #region JWTConfig
@@ -68,9 +71,9 @@ namespace Akelny
             });
 
             builder.Services.AddSingleton(tokenValidationParameter);
-            //builder.Services.def<IdentityUser>();
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-         .AddEntityFrameworkStores<ApplicationDbContext>();
+           
+         //   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+         //.AddEntityFrameworkStores<ApplicationDbContext>();
             #endregion
             #region Repos
 

@@ -4,6 +4,7 @@ using Akelny.BLL.Dto.SectionsDto;
 using Akelny.BLL.Services.MealServices;
 using Akelny.DAL.Context;
 using Akelny.DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ namespace Akelny.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles ="Admin")]
     public class MealController : ControllerBase
     {
         private readonly IMealServices _mealServices;
@@ -22,6 +24,7 @@ namespace Akelny.Controllers
             _context = context;
         }
         [HttpGet]
+        [Authorize]
         public ActionResult<List<MealDto>> GetAll()
         {
             return _mealServices.GetAll();

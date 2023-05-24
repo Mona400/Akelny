@@ -16,22 +16,25 @@ namespace Akelny.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         // private readonly JWT _jWT;
         private readonly IConfiguration _configuration;
         private readonly ApplicationDbContext _context;
         private readonly TokenValidationParameters _tokenValidationParameters;
-        public AuthenticationController(UserManager<IdentityUser> userManager, IConfiguration configuration, ApplicationDbContext context, TokenValidationParameters tokenValidationParameters)
+        public AuthenticationController(UserManager<User> userManager, IConfiguration configuration, ApplicationDbContext context, TokenValidationParameters tokenValidationParameters, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _configuration = configuration;
             _context = context;
             _tokenValidationParameters = tokenValidationParameters;
+            _roleManager = roleManager;
             // _jWT = jWT;
 
         }
         [HttpPost]
         [Route("Register")]
+        
         public async Task<IActionResult> Register([FromBody] UserRegistrationRequestDto userRegistrationRequestDto)
         {
             //valid the Incomming Request
@@ -51,16 +54,27 @@ namespace Akelny.Controllers
                     });
                 }
                 //create User
-                var _user = new IdentityUser()
+                var _user = new User
                 {
                     Email = userRegistrationRequestDto.Email,
-                    UserName = userRegistrationRequestDto.Name
+                    UserName = userRegistrationRequestDto.Username,
+                    Address=userRegistrationRequestDto.Address,
+                    FirstName=userRegistrationRequestDto.FirstName,
+                    LastName=userRegistrationRequestDto.LastName,
+                    DOB=userRegistrationRequestDto.DOB,
+                    
                 };
+                if(!await _roleManager.RoleExistsAsync(userRegistrationRequestDto.UserType))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole(userRegistrationRequestDto.UserType));
+                }
+             
                 var is_Created = await _userManager.CreateAsync(_user, userRegistrationRequestDto.Password);
+               await _userManager.AddToRoleAsync(_user, userRegistrationRequestDto.UserType);
                 if (is_Created.Succeeded)
                 {
                     //Generate Token
-                    var tokent = GenerateJwtToken(_user);
+                    var tokent = await GenerateJwtToken(_user);
                     return Ok(tokent);
                 }
                 return BadRequest(new AuthResult()

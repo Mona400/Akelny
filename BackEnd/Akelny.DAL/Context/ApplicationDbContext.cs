@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Akelny.DAL.Context
 {
-    public class ApplicationDbContext:IdentityDbContext
+    public class ApplicationDbContext:IdentityDbContext<User>
     {
         
         public DbSet<Promotion> Promotions { get; set; }
@@ -38,6 +38,7 @@ namespace Akelny.DAL.Context
             modelBuilder.ApplyConfiguration(new RestaurantConfiguration());
             modelBuilder.ApplyConfiguration(new MealConfiguration());
             modelBuilder.ApplyConfiguration(new SectionConfiguration());
+            modelBuilder.Entity<User>().Property(c=>c.DOB).HasColumnType("date");
 
             var restaurants = JsonSerializer.Deserialize<List<Restaurant>>(@"[
     {""Id"":1,""Title"":""Title1"",""Description"":""Description1"",""Speciality"":""Speciality1"",""Rating"":10.2},

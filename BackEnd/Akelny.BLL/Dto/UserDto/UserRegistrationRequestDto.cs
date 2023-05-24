@@ -10,10 +10,16 @@ namespace Akelny.BLL.Dto.UserDto
     public class UserRegistrationRequestDto
     {
         [Required]
-        public string Name { get; set; }
+        public string Username { get; set; } = string.Empty;
         [Required]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
         [Required]
-        public string Password{ get; set; }
+        public string Password{ get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public bool IsEmailVerified { get; set; }
+        public string UserType { get; set; } = string.Empty;
+        public DateTime DOB { get; set; }
+        public string? Address { get; set; } = string.Empty;
     }
 }
