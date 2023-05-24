@@ -17,4 +17,5 @@ public class Meals_Dates
     [Column("Meal_ID")]
     public int MealID { get; set; }
     public Meal meal { get; set; }
+    public Cart? Cart { get; set; }
 }

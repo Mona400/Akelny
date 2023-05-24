@@ -7,6 +7,7 @@ using Akelny.BLL.Services.SectionServices;
 using Akelny.BLL.Services.SubService;
 using Akelny.DAL.Context;
 using Akelny.DAL.Models;
+using Akelny.DAL.Repo.CartRepo;
 using Akelny.DAL.Repo.MealRepo;
 using Akelny.DAL.Repo.PromotionRepo;
 using Akelny.DAL.Repo.ResturantRepo;
@@ -87,6 +88,7 @@ namespace Akelny
             builder.Services.AddScoped<IResturantRepo, ResturantRepo>();
             builder.Services.AddScoped<ISubRepo, SubRepo>();
             builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
+            builder.Services.AddScoped<ICartRepo, CartRepo>();
             #endregion
 
             #region Services

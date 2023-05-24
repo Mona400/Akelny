@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Akelny.DAL.Models
+namespace Akelny.DAL.Models;
+
+public class Cart
 {
-    internal class Cart
-    {
-    }
+    public int Id { get; set; }
+    [ForeignKey("User")]
+    public int UserId { get; set; }
+    public decimal MonthlyPrice { get; set; }
+
+    public string Discount { get; set; } = string.Empty;
+    public ICollection<Meals_Dates>? Meals { get; set; }
+    public PaymentDetails? PaymentDetails { get; set; }
 }
