@@ -276,6 +276,45 @@ namespace Akelny.DAL.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Akelny.DAL.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Impression")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RestId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TimeCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId1");
+
+                    b.ToTable("Reviews");
+                });
+
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>
                 {
                     b.Property<int>("Id")
@@ -557,12 +596,10 @@ namespace Akelny.DAL.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -599,12 +636,10 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -665,6 +700,13 @@ namespace Akelny.DAL.Migrations
                     b.Navigation("Subscriptions");
 
                     b.Navigation("meal");
+                });
+
+            modelBuilder.Entity("Akelny.DAL.Models.Review", b =>
+                {
+                    b.HasOne("Akelny.DAL.Models.User", null)
+                        .WithMany("Reviews")
+                        .HasForeignKey("UserId1");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
@@ -765,6 +807,8 @@ namespace Akelny.DAL.Migrations
 
             modelBuilder.Entity("Akelny.DAL.Models.User", b =>
                 {
+                    b.Navigation("Reviews");
+
                     b.Navigation("subscriptions");
                 });
 #pragma warning restore 612, 618

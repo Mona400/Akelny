@@ -2,22 +2,24 @@
 using Akelny.BLL.Services.MealServices;
 using Akelny.BLL.Services.PromotionServices;
 using Akelny.BLL.Services.ResturantServices;
+using Akelny.BLL.Services.Reviewservice;
 using Akelny.BLL.Services.SectionServices;
 using Akelny.BLL.Services.SubService;
 using Akelny.DAL.Context;
+using Akelny.DAL.Models;
 using Akelny.DAL.Repo.MealRepo;
 using Akelny.DAL.Repo.PromotionRepo;
 using Akelny.DAL.Repo.ResturantRepo;
+using Akelny.DAL.Repo.ReviewRepo;
 using Akelny.DAL.Repo.SectionRepo;
 using Akelny.DAL.Repo.SubRepo;
 using Akelny.DAL.UnitOfWork;
 using Akelny.Helper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using System.Text;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
-using Akelny.DAL.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Akelny
 {
@@ -37,14 +39,14 @@ namespace Akelny
             #region Database
             var con = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(con));
-          //
+            //
             builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             #endregion
 
             #region JWTConfig
             builder.Services.Configure<JWT>(builder.Configuration.GetSection(key: "JWTConfig"));
             var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection(key: "JWTConfig:Secret").Value);
-            var tokenValidationParameter= new TokenValidationParameters()
+            var tokenValidationParameter = new TokenValidationParameters()
             {
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(key),
@@ -57,32 +59,34 @@ namespace Akelny
             #endregion
 
             #region JWT Services
-            builder.Services.AddAuthentication(options=>{
-                options.DefaultAuthenticateScheme=JwtBearerDefaults.AuthenticationScheme;
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
 
             .AddJwtBearer(jwt =>
             {
-               
+
                 jwt.SaveToken = true;
                 jwt.TokenValidationParameters = tokenValidationParameter;
             });
 
             builder.Services.AddSingleton(tokenValidationParameter);
-           
-         //   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-         //.AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //.AddEntityFrameworkStores<ApplicationDbContext>();
             #endregion
             #region Repos
 
-            builder.Services.AddScoped<IPromotionRepo , PromotionRepo>();
+            builder.Services.AddScoped<IPromotionRepo, PromotionRepo>();
             builder.Services.AddScoped<ISectionRepo, SectionRepo>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-            builder.Services.AddScoped<IMealRepo,MealRepo>();
+            builder.Services.AddScoped<IMealRepo, MealRepo>();
             builder.Services.AddScoped<IResturantRepo, ResturantRepo>();
             builder.Services.AddScoped<ISubRepo, SubRepo>();
+            builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
             #endregion
 
             #region Services
@@ -92,6 +96,8 @@ namespace Akelny
             builder.Services.AddScoped<IMealServices, MealServices>();
             builder.Services.AddScoped<IResturantServices, ResturantServices>();
             builder.Services.AddScoped<ISubService, SubService>();
+            builder.Services.AddScoped<IReviewService, ReviewService>();
+
 
             #endregion
 
