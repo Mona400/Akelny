@@ -1,13 +1,10 @@
 ﻿using Akelny.BLL.Dto.MealDto;
-using Akelny.BLL.Dto.PromotionDto;
-using Akelny.BLL.Dto.SectionsDto;
+
 using Akelny.BLL.Services.MealServices;
 using Akelny.DAL.Context;
-using Akelny.DAL.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace Akelny.Controllers
 {
