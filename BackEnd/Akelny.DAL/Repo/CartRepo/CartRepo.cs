@@ -38,7 +38,7 @@ public class CartRepo : GenericRepo<Cart>, ICartRepo
         return CartId;
     }
 
-    public Cart? GetCartByUserId(int id)
+    public Cart? GetCartByUserId(string id)
     {
         var CartId = _context.Carts.Where(c => c.UserId == id)
              .Include(c => c.Meals)

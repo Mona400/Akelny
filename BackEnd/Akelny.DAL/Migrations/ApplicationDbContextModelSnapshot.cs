@@ -35,17 +35,19 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("MonthlyPrice")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(9,2)");
 
                     b.Property<string>("PaymentDetailsVisaNumber")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PaymentDetailsVisaNumber");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Carts");
                 });
@@ -154,15 +156,6 @@ namespace Akelny.DAL.Migrations
                     b.HasIndex("SubscriptionsID");
 
                     b.ToTable("Meals_and_Dates");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            Date = "15:00 AM",
-                            MealID = 1,
-                            SubscriptionsID = 1
-                        });
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.PaymentDetails", b =>
@@ -352,10 +345,8 @@ namespace Akelny.DAL.Migrations
                     b.Property<DateTime>("TimeCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserName")
@@ -364,7 +355,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Reviews");
                 });
@@ -421,67 +412,17 @@ namespace Akelny.DAL.Migrations
                     b.Property<int>("Substate")
                         .HasColumnType("int");
 
-                    b.Property<int>("TestUserID")
-                        .HasColumnType("int");
+                    b.Property<string>("TestUserID")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("TimeCreated")
                         .HasColumnType("datetime2(0)");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("TestUserID");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Subscriptions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Monthly_Price = 59.99m,
-                            RenewDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Substate = 0,
-                            TestUserID = 1,
-                            TimeCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("Akelny.DAL.Models.TestUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TestUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Username = "mahmoud1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Username = "mahmoud2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Username = "mahmoud3"
-                        });
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.User", b =>
@@ -724,7 +665,13 @@ namespace Akelny.DAL.Migrations
                         .WithMany()
                         .HasForeignKey("PaymentDetailsVisaNumber");
 
+                    b.HasOne("Akelny.DAL.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("PaymentDetails");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
@@ -752,7 +699,7 @@ namespace Akelny.DAL.Migrations
                         .WithMany("Meals")
                         .HasForeignKey("CartId");
 
-                    b.HasOne("Akelny.DAL.Models.Meal", "meal")
+                    b.HasOne("Akelny.DAL.Models.Meal", "Meal")
                         .WithMany()
                         .HasForeignKey("MealID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -766,29 +713,25 @@ namespace Akelny.DAL.Migrations
 
                     b.Navigation("Cart");
 
-                    b.Navigation("Subscriptions");
+                    b.Navigation("Meal");
 
-                    b.Navigation("meal");
+                    b.Navigation("Subscriptions");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Review", b =>
                 {
                     b.HasOne("Akelny.DAL.Models.User", null)
                         .WithMany("Reviews")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
                 {
-                    b.HasOne("Akelny.DAL.Models.TestUser", "user")
-                        .WithMany()
-                        .HasForeignKey("TestUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Akelny.DAL.Models.User", null)
+                    b.HasOne("Akelny.DAL.Models.User", "user")
                         .WithMany("subscriptions")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("TestUserID");
 
                     b.Navigation("user");
                 });

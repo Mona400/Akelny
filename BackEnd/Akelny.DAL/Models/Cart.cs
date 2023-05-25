@@ -6,7 +6,11 @@ public class Cart
 {
     public int Id { get; set; }
     [ForeignKey("User")]
-    public int UserId { get; set; }
+    public string? UserId { get; set; }
+
+    public User? User { get; set; }
+
+    [Column(TypeName = "decimal(9,2)")]
     public decimal MonthlyPrice { get; set; }
 
     public string Discount { get; set; } = string.Empty;

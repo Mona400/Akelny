@@ -10,6 +10,6 @@ namespace Akelny.DAL.Repo.ResturantRepo
 {
     public interface IResturantRepo:IGenericRepo<Restaurant>
     {
-        Restaurant GetResturantById(int? ResturantId);
+        Restaurant? GetResturantById(int? ResturantId);
     }
 }

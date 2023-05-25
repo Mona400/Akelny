@@ -55,7 +55,7 @@ namespace Akelny.Controllers
         }
         [HttpGet]
         [Route("GetBy{id}")]
-        public ActionResult <Promotion> GetById(int id)
+        public ActionResult <Promotion?> GetById(int id)
         {
             return _promotionServices.GetById(id);
         }

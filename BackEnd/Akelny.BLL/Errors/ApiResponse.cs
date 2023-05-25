@@ -8,7 +8,7 @@ namespace Akelny.BLL.Errors
 {
     public class ApiResponse
     {
-        public ApiResponse(int _statusCode, string _message = null)
+        public ApiResponse(int _statusCode, string? _message = null)
         {
             StatusCode = _statusCode;
             Message = _message ?? GetDefaultMessageForStatusCode(_statusCode);
@@ -24,7 +24,7 @@ namespace Akelny.BLL.Errors
                 401 => "Authorized you are not",
                 404 => "Response found it is not",
                 500 => "Server error occured",
-                _ => null
+                _ => "No Such Code Please Try Again",
             };
         }
     }

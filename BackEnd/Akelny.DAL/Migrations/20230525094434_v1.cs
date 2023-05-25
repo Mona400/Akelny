@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Akelny.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class addRefreshTokens : Migration
+    public partial class v1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,6 +32,12 @@ namespace Akelny.DAL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsEmailVerified = table.Column<bool>(type: "bit", nullable: false),
+                    UserType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DOB = table.Column<DateTime>(type: "date", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -50,6 +56,20 @@ namespace Akelny.DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PaymentDetails",
+                columns: table => new
+                {
+                    VisaNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CardVerificationValue = table.Column<int>(type: "int", nullable: false),
+                    HolderName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    VisaExpirationDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PaymentDetails", x => x.VisaNumber);
                 });
 
             migrationBuilder.CreateTable(
@@ -124,19 +144,6 @@ namespace Akelny.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TestUsers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TestUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -182,8 +189,8 @@ namespace Akelny.DAL.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
@@ -227,8 +234,8 @@ namespace Akelny.DAL.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -240,6 +247,74 @@ namespace Akelny.DAL.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Reviews",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    RestId = table.Column<int>(type: "int", nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Impression = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TimeCreated = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Reviews", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Reviews_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Subscriptions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    userId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    TestUserID = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Substate = table.Column<int>(type: "int", nullable: false),
+                    Monthly_Price = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
+                    TimeCreated = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
+                    RenewDate = table.Column<DateTime>(type: "datetime2(0)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Subscriptions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Subscriptions_AspNetUsers_userId",
+                        column: x => x.userId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Carts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    MonthlyPrice = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
+                    Discount = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PaymentDetailsVisaNumber = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Carts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Carts_PaymentDetails_PaymentDetailsVisaNumber",
+                        column: x => x.PaymentDetailsVisaNumber,
+                        principalTable: "PaymentDetails",
+                        principalColumn: "VisaNumber");
                 });
 
             migrationBuilder.CreateTable(
@@ -297,41 +372,24 @@ namespace Akelny.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Subscriptions",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    TestUserID = table.Column<int>(type: "int", nullable: false),
-                    Substate = table.Column<int>(type: "int", nullable: false),
-                    Monthly_Price = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
-                    TimeCreated = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
-                    RenewDate = table.Column<DateTime>(type: "datetime2(0)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Subscriptions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Subscriptions_TestUsers_TestUserID",
-                        column: x => x.TestUserID,
-                        principalTable: "TestUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Meals_and_Dates",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Sub_ID = table.Column<int>(type: "int", nullable: false),
-                    Date = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Meal_ID = table.Column<int>(type: "int", nullable: false)
+                    Date = table.Column<DateTime>(type: "date", nullable: false),
+                    Meal_ID = table.Column<int>(type: "int", nullable: false),
+                    CartId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Meals_and_Dates", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Meals_and_Dates_Carts_CartId",
+                        column: x => x.CartId,
+                        principalTable: "Carts",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Meals_and_Dates_Meals_Meal_ID",
                         column: x => x.Meal_ID,
@@ -367,16 +425,6 @@ namespace Akelny.DAL.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "TestUsers",
-                columns: new[] { "Id", "Username" },
-                values: new object[,]
-                {
-                    { 1, "mahmoud1" },
-                    { 2, "mahmoud2" },
-                    { 3, "mahmoud3" }
-                });
-
-            migrationBuilder.InsertData(
                 table: "Meals",
                 columns: new[] { "Id", "Description", "Image", "Name", "Price", "RestaurantId", "SectionId" },
                 values: new object[,]
@@ -385,16 +433,6 @@ namespace Akelny.DAL.Migrations
                     { 2, "Meal Des2", "", "Meal Name2", 120.2m, 1, 2 },
                     { 3, "Meal Des3", "", "Meal Name3", 120.2m, 1, 1 }
                 });
-
-            migrationBuilder.InsertData(
-                table: "Subscriptions",
-                columns: new[] { "Id", "Monthly_Price", "RenewDate", "Substate", "TestUserID", "TimeCreated" },
-                values: new object[] { 1, 59.99m, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Meals_and_Dates",
-                columns: new[] { "ID", "Date", "Meal_ID", "Sub_ID" },
-                values: new object[] { 1, "15:00 AM", 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -436,6 +474,11 @@ namespace Akelny.DAL.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Carts_PaymentDetailsVisaNumber",
+                table: "Carts",
+                column: "PaymentDetailsVisaNumber");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Meals_RestaurantId",
                 table: "Meals",
                 column: "RestaurantId");
@@ -444,6 +487,11 @@ namespace Akelny.DAL.Migrations
                 name: "IX_Meals_SectionId",
                 table: "Meals",
                 column: "SectionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Meals_and_Dates_CartId",
+                table: "Meals_and_Dates",
+                column: "CartId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Meals_and_Dates_Meal_ID",
@@ -461,9 +509,14 @@ namespace Akelny.DAL.Migrations
                 column: "SectionsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Subscriptions_TestUserID",
+                name: "IX_Reviews_UserId",
+                table: "Reviews",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Subscriptions_userId",
                 table: "Subscriptions",
-                column: "TestUserID");
+                column: "userId");
         }
 
         /// <inheritdoc />
@@ -497,10 +550,13 @@ namespace Akelny.DAL.Migrations
                 name: "RestaurantSection");
 
             migrationBuilder.DropTable(
+                name: "Reviews");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Carts");
 
             migrationBuilder.DropTable(
                 name: "Meals");
@@ -509,13 +565,16 @@ namespace Akelny.DAL.Migrations
                 name: "Subscriptions");
 
             migrationBuilder.DropTable(
+                name: "PaymentDetails");
+
+            migrationBuilder.DropTable(
                 name: "Restaurant");
 
             migrationBuilder.DropTable(
                 name: "Sections");
 
             migrationBuilder.DropTable(
-                name: "TestUsers");
+                name: "AspNetUsers");
         }
     }
 }

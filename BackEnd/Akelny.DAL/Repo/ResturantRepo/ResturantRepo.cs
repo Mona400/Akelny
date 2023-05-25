@@ -17,7 +17,7 @@ namespace Akelny.DAL.Repo.ResturantRepo
         {
             _context = context;
         }
-        public Restaurant GetResturantById(int? ResturantId)
+        public Restaurant? GetResturantById(int? ResturantId)
         {
             var restaurant = _context.Restaurant
              .Include(m => m.Sections)

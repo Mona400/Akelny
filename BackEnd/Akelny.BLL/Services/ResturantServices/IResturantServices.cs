@@ -16,7 +16,7 @@ namespace Akelny.BLL.Services.ResturantServices
         void Edit(int id, ResturantToEditDto resturantToEditDto);
         void Delete(int id);
         //Restaurant GetById(int id);
-         ResturantDto GetById(int id);
+         ResturantDto? GetById(int id);
 
     }
 }

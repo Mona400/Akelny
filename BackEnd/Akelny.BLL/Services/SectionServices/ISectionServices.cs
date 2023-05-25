@@ -15,6 +15,6 @@ namespace Akelny.BLL.Services.SectionServices
        void Add(SectionToAddDto sectionDto);
        void Edit(int id, SectionToEditDto sectionDto);
        void Delete(int id);
-        public SectionDto GetById(int id);
+        public SectionDto? GetById(int id);
     }
 }

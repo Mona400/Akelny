@@ -73,3 +73,18 @@ D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\D
 D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
 D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
 D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll

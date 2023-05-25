@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Akelny.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230524164641_Reviews")]
-    partial class Reviews
+    [Migration("20230525094550_v2")]
+    partial class v2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,34 @@ namespace Akelny.DAL.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Akelny.DAL.Models.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Discount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("MonthlyPrice")
+                        .HasColumnType("decimal(9,2)");
+
+                    b.Property<string>("PaymentDetailsVisaNumber")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PaymentDetailsVisaNumber");
+
+                    b.ToTable("Carts");
+                });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
                 {
@@ -105,9 +133,11 @@ namespace Akelny.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("date");
 
                     b.Property<int>("MealID")
                         .HasColumnType("int")
@@ -119,20 +149,34 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("CartId");
+
                     b.HasIndex("MealID");
 
                     b.HasIndex("SubscriptionsID");
 
                     b.ToTable("Meals_and_Dates");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            Date = "15:00 AM",
-                            MealID = 1,
-                            SubscriptionsID = 1
-                        });
+            modelBuilder.Entity("Akelny.DAL.Models.PaymentDetails", b =>
+                {
+                    b.Property<string>("VisaNumber")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CardVerificationValue")
+                        .HasColumnType("int");
+
+                    b.Property<string>("HolderName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VisaExpirationDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("VisaNumber");
+
+                    b.ToTable("PaymentDetails");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Promotion", b =>
@@ -301,10 +345,8 @@ namespace Akelny.DAL.Migrations
                     b.Property<DateTime>("TimeCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserName")
@@ -313,7 +355,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Reviews");
                 });
@@ -370,67 +412,17 @@ namespace Akelny.DAL.Migrations
                     b.Property<int>("Substate")
                         .HasColumnType("int");
 
-                    b.Property<int>("TestUserID")
-                        .HasColumnType("int");
+                    b.Property<string>("TestUserID")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("TimeCreated")
                         .HasColumnType("datetime2(0)");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("TestUserID");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Subscriptions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Monthly_Price = 59.99m,
-                            RenewDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Substate = 0,
-                            TestUserID = 1,
-                            TimeCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("Akelny.DAL.Models.TestUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TestUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Username = "mahmoud1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Username = "mahmoud2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Username = "mahmoud3"
-                        });
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.User", b =>
@@ -667,6 +659,15 @@ namespace Akelny.DAL.Migrations
                     b.ToTable("RestaurantSection");
                 });
 
+            modelBuilder.Entity("Akelny.DAL.Models.Cart", b =>
+                {
+                    b.HasOne("Akelny.DAL.Models.PaymentDetails", "PaymentDetails")
+                        .WithMany()
+                        .HasForeignKey("PaymentDetailsVisaNumber");
+
+                    b.Navigation("PaymentDetails");
+                });
+
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
                 {
                     b.HasOne("Akelny.DAL.Models.Restaurant", "Restaurant")
@@ -688,7 +689,11 @@ namespace Akelny.DAL.Migrations
 
             modelBuilder.Entity("Akelny.DAL.Models.Meals_Dates", b =>
                 {
-                    b.HasOne("Akelny.DAL.Models.Meal", "meal")
+                    b.HasOne("Akelny.DAL.Models.Cart", "Cart")
+                        .WithMany("Meals")
+                        .HasForeignKey("CartId");
+
+                    b.HasOne("Akelny.DAL.Models.Meal", "Meal")
                         .WithMany()
                         .HasForeignKey("MealID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -700,29 +705,27 @@ namespace Akelny.DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Subscriptions");
+                    b.Navigation("Cart");
 
-                    b.Navigation("meal");
+                    b.Navigation("Meal");
+
+                    b.Navigation("Subscriptions");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Review", b =>
                 {
                     b.HasOne("Akelny.DAL.Models.User", null)
                         .WithMany("Reviews")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
                 {
-                    b.HasOne("Akelny.DAL.Models.TestUser", "user")
-                        .WithMany()
-                        .HasForeignKey("TestUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Akelny.DAL.Models.User", null)
+                    b.HasOne("Akelny.DAL.Models.User", "user")
                         .WithMany("subscriptions")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("TestUserID");
 
                     b.Navigation("user");
                 });
@@ -791,6 +794,11 @@ namespace Akelny.DAL.Migrations
                         .HasForeignKey("SectionsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Akelny.DAL.Models.Cart", b =>
+                {
+                    b.Navigation("Meals");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Restaurant", b =>

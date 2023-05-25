@@ -4108,19 +4108,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\mahmo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI_Projects\\GraduationProjectBackendASPN.net\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
+      "projectUniqueName": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
       "projectName": "Akelny.BLL",
-      "projectPath": "D:\\ITI_Projects\\GraduationProjectBackendASPN.net\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI_Projects\\GraduationProjectBackendASPN.net\\Akelny\\BackEnd\\Akelny.BLL\\obj\\",
+      "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
+      "packagesPath": "C:\\Users\\mahmo\\.nuget\\packages\\",
+      "outputPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mahmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4134,8 +4134,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\ITI_Projects\\GraduationProjectBackendASPN.net\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
-              "projectPath": "D:\\ITI_Projects\\GraduationProjectBackendASPN.net\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
+            "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+              "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
             }
           }
         }
@@ -4165,7 +4165,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -11,11 +11,13 @@ public class Meals_Dates
     [Column("Sub_ID")]
     public int SubscriptionsID { get; set; }
 
-    public Subscriptions Subscriptions { get; set; }
-    public string Date { get; set; }
+    public Subscriptions? Subscriptions { get; set; }
+
+ 
+    public string Date { get; set; } = string.Empty;
 
     [Column("Meal_ID")]
     public int MealID { get; set; }
-    public Meal meal { get; set; }
+    public Meal? Meal { get; set; }
     public Cart? Cart { get; set; }
 }

@@ -12,7 +12,7 @@ public interface ISubRepo:IGenericRepo<Subscriptions>
 {
     List<Subscriptions>? GetSubsWithUser_MealsByID(int subID);
 
-    List<Subscriptions> GetSubsByUserID(int userID);
+    List<Subscriptions> GetSubsByUserID(string userID);
 
     List<Subscriptions> GetAllSubs();
 

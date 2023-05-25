@@ -46,7 +46,7 @@ namespace Akelny
 
             #region JWTConfig
             builder.Services.Configure<JWT>(builder.Configuration.GetSection(key: "JWTConfig"));
-            var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection(key: "JWTConfig:Secret").Value);
+            var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection(key: "JWTConfig:Secret").Value!);
             var tokenValidationParameter = new TokenValidationParameters()
             {
                 ValidateIssuerSigningKey = true,

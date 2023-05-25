@@ -13,7 +13,7 @@ namespace Akelny.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles ="Admin")]
+//    [Authorize(Roles ="Admin")]
     public class MealController : ControllerBase
     {
         private readonly IMealServices _mealServices;
@@ -24,7 +24,7 @@ namespace Akelny.Controllers
             _context = context;
         }
         [HttpGet]
-        [Authorize]
+       // [Authorize]
         public ActionResult<List<MealDto>> GetAll()
         {
             return _mealServices.GetAll();
@@ -80,7 +80,7 @@ namespace Akelny.Controllers
         }
         [HttpGet]
         [Route("GetBy{id}")]
-        public ActionResult<MealDto> GetById(int id)
+        public ActionResult<MealDto?> GetById(int id)
         {
             return _mealServices.GetById(id);
         }

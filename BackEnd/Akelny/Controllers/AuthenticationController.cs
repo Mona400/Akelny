@@ -70,13 +70,14 @@ namespace Akelny.Controllers
                 }
              
                 var is_Created = await _userManager.CreateAsync(_user, userRegistrationRequestDto.Password);
-               await _userManager.AddToRoleAsync(_user, userRegistrationRequestDto.UserType);
+           
                 if (is_Created.Succeeded)
                 {
                     //Generate Token
                     var tokent = await GenerateJwtToken(_user);
                     return Ok(tokent);
                 }
+                await _userManager.AddToRoleAsync(_user, userRegistrationRequestDto.UserType);
                 return BadRequest(new AuthResult()
                 {
 
@@ -139,7 +140,7 @@ namespace Akelny.Controllers
         private async Task<AuthResult> GenerateJwtToken(IdentityUser user)
         {
             var JwtTokenHandler = new JwtSecurityTokenHandler();
-            var Key = Encoding.UTF8.GetBytes(_configuration.GetSection(key: "JWTConfig:Secret").Value);
+            var Key = Encoding.UTF8.GetBytes(_configuration.GetSection(key: "JWTConfig:Secret").Value!);
 
             //Token Descriptor
             var tokenDescriptor = new SecurityTokenDescriptor()
@@ -147,13 +148,13 @@ namespace Akelny.Controllers
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("Id", user.Id),
-                    new Claim(JwtRegisteredClaimNames.Sub, user.Email),
-                    new Claim(JwtRegisteredClaimNames.Email, value: user.Email),
+                    new Claim(JwtRegisteredClaimNames.Sub, user.Email!),
+                    new Claim(JwtRegisteredClaimNames.Email, value: user.Email!),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
 
                 }),
                 //Expire Refress Token
-                Expires = DateTime.UtcNow.Add(TimeSpan.Parse(_configuration.GetSection(key: "JWTConfig:ExpireTimeFrame").Value)),
+                Expires = DateTime.UtcNow.Add(TimeSpan.Parse(_configuration.GetSection(key: "JWTConfig:ExpireTimeFrame").Value!)),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Key), SecurityAlgorithms.HmacSha256)
             };
 
