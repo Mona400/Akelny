@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Akelny.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230525094550_v2")]
-    partial class v2
+    [Migration("20230528131933_InitalTables")]
+    partial class InitalTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,12 +43,14 @@ namespace Akelny.DAL.Migrations
                     b.Property<string>("PaymentDetailsVisaNumber")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PaymentDetailsVisaNumber");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Carts");
                 });
@@ -136,8 +138,9 @@ namespace Akelny.DAL.Migrations
                     b.Property<int?>("CartId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("date");
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MealID")
                         .HasColumnType("int")
@@ -665,7 +668,13 @@ namespace Akelny.DAL.Migrations
                         .WithMany()
                         .HasForeignKey("PaymentDetailsVisaNumber");
 
+                    b.HasOne("Akelny.DAL.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("PaymentDetails");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>

@@ -304,7 +304,6 @@ G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\Akeln
 G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\Akelny.AssemblyInfoInputs.cache
 G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\Akelny.AssemblyInfo.cs
 G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\Akelny.csproj.CoreCompileInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\Akelny.MvcApplicationPartsAssemblyInfo.cs
 G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\Akelny.MvcApplicationPartsAssemblyInfo.cache
 G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\staticwebassets\msbuild.Akelny.Microsoft.AspNetCore.StaticWebAssets.props
 G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny\obj\Debug\net7.0\staticwebassets\msbuild.build.Akelny.props

@@ -1,4 +1,5 @@
-﻿using Akelny.DAL.Repo.MealRepo;
+﻿using Akelny.DAL.Repo.CartRepo;
+using Akelny.DAL.Repo.MealRepo;
 using Akelny.DAL.Repo.PromotionRepo;
 using Akelny.DAL.Repo.ResturantRepo;
 using Akelny.DAL.Repo.ReviewRepo;
@@ -17,6 +18,7 @@ namespace Akelny.DAL.UnitOfWork
 
         public ISubRepo Subrepo { get; }
         public IReviewRepo ReviewRepo { get; }
+        public ICartRepo CartRepo { get; }
         public string SaveImageMethod(IFormFile? image);
     }
 }

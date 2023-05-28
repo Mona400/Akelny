@@ -1,4 +1,5 @@
-﻿using Akelny.DAL.Repo.MealRepo;
+﻿using Akelny.DAL.Repo.CartRepo;
+using Akelny.DAL.Repo.MealRepo;
 using Akelny.DAL.Repo.PromotionRepo;
 using Akelny.DAL.Repo.ResturantRepo;
 using Akelny.DAL.Repo.ReviewRepo;
@@ -14,13 +15,14 @@ namespace Akelny.DAL.UnitOfWork
         public ISectionRepo SectionRepo { get; }
         public IMealRepo MealRepo { get; }
         public IResturantRepo ResturantRepo { get; }
-
+        public ICartRepo CartRepo { get; }
         public ISubRepo Subrepo { get; }
         public IReviewRepo ReviewRepo { get; }
-        public UnitOfWork(ISubRepo subRepo, IPromotionRepo promotionRepo, ISectionRepo sectionRepo, IMealRepo mealRepo, IResturantRepo resturantRepo, IReviewRepo reviewRepo)
+        public UnitOfWork( ICartRepo cartRepo ,ISubRepo subRepo, IPromotionRepo promotionRepo, ISectionRepo sectionRepo, IMealRepo mealRepo, IResturantRepo resturantRepo, IReviewRepo reviewRepo)
         {
             PromotionRepo = promotionRepo;
             SectionRepo = sectionRepo;
+            CartRepo = cartRepo;
             MealRepo = mealRepo;
             ResturantRepo = resturantRepo;
             Subrepo = subRepo;

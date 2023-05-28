@@ -1,4 +1,5 @@
 
+using Akelny.BLL.Services.CartServices;
 using Akelny.BLL.Services.MealServices;
 using Akelny.BLL.Services.PromotionServices;
 using Akelny.BLL.Services.ResturantServices;
@@ -93,6 +94,7 @@ namespace Akelny
 
             #region Services
 
+            builder.Services.AddScoped<ICartService, CartServices>();
             builder.Services.AddScoped<IPromotionServices, PromotionServices>();
             builder.Services.AddScoped<ISectionServices, SectionServices>();
             builder.Services.AddScoped<IMealServices, MealServices>();
