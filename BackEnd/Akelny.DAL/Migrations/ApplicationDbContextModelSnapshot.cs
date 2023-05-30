@@ -49,7 +49,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Carts");
+                    b.ToTable("Carts", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
@@ -155,7 +155,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("SubscriptionsID");
 
-                    b.ToTable("Meals_and_Dates");
+                    b.ToTable("Meals_and_Dates", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.PaymentDetails", b =>
@@ -176,7 +176,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("VisaNumber");
 
-                    b.ToTable("PaymentDetails");
+                    b.ToTable("PaymentDetails", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Promotion", b =>
@@ -222,7 +222,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Promotions");
+                    b.ToTable("Promotions", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.RefreshToken", b =>
@@ -259,7 +259,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("RefreshTokens", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Restaurant", b =>
@@ -291,7 +291,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Restaurant");
+                    b.ToTable("Restaurant", (string)null);
 
                     b.HasData(
                         new
@@ -357,7 +357,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>
@@ -422,7 +422,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("TestUserID");
 
-                    b.ToTable("Subscriptions");
+                    b.ToTable("Subscriptions", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.User", b =>
@@ -656,7 +656,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("SectionsId");
 
-                    b.ToTable("RestaurantSection");
+                    b.ToTable("RestaurantSection", (string)null);
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Cart", b =>

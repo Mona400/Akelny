@@ -1,5 +1,6 @@
 ﻿using Akelny.BLL.Dto.CartDto;
 using Akelny.BLL.Dto.ReviewDto;
+using Akelny.BLL.Dto.SubDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,9 @@ public interface ICartService
     void Add(CartToAddDto cartDto);
     int? Edit(int id, CartToEditDto cartToEditdto);
     int? Delete(int id);
-    public CartDto? GetById(int id);
+    public OneCardDto? GetById(int id);
+
+    public List<MealsAndDatesDto>? GetAllMealByCartID(int cartID);
+
+    public OneCardDto AddMealsToCart(int cartID, List<MealsAndDatesDto> mdto);
 }
