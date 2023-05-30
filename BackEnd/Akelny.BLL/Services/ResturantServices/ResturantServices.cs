@@ -39,7 +39,7 @@ namespace Akelny.BLL.Services.ResturantServices
 
         public void Delete(int id)
         {
-            Restaurant restaurant = _unitOfWork.ResturantRepo.GetById(id);
+            Restaurant? restaurant = _unitOfWork.ResturantRepo.GetById(id);
 
             if (restaurant == null) { return; }
 
@@ -49,7 +49,7 @@ namespace Akelny.BLL.Services.ResturantServices
 
         public void Edit(int id, ResturantToEditDto resturantToEditDto)
         {
-            Restaurant restaurant = _unitOfWork.ResturantRepo.GetById(id);
+            Restaurant? restaurant = _unitOfWork.ResturantRepo.GetById(id);
             var newName = "";
             if (resturantToEditDto.Image is not null)
             {
@@ -85,9 +85,9 @@ namespace Akelny.BLL.Services.ResturantServices
             }).ToList();
         }
 
-        public ResturantDto GetById(int id)
+        public ResturantDto? GetById(int id)
         {
-            Restaurant restaurant = _unitOfWork.ResturantRepo.GetResturantById(id);
+            Restaurant? restaurant = _unitOfWork.ResturantRepo.GetResturantById(id);
 
             if (restaurant == null) { return null; }
             var resturantDto = new ResturantDto();

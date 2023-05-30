@@ -56,7 +56,7 @@ namespace Akelny.Controllers
         }
         [HttpGet]
         [Route("GetBy{id}")]
-        public ActionResult<SectionDto> GetById(int id)
+        public ActionResult<SectionDto?> GetById(int id)
         {
             return _sectionServices.GetById(id);
         }

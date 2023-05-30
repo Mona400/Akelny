@@ -16,6 +16,6 @@ namespace Akelny.BLL.Dto.MealDto
         public string Image { get; set; } = string.Empty;
         public decimal? Price { get; set; }
         public int SectionId { get; set; }
-        public SectionDto Section { get; set; }
+        public SectionDto? Section { get; set; }
     }
 }

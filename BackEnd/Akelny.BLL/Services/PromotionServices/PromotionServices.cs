@@ -44,7 +44,7 @@ namespace Akelny.BLL.Services.PromotionServices
 
         public void Delete(int id)
         {
-            Promotion promotion = _unitOfWork.PromotionRepo.GetById(id);
+            Promotion? promotion = _unitOfWork.PromotionRepo.GetById(id);
 
             if (promotion == null) { return ; }
 
@@ -56,7 +56,7 @@ namespace Akelny.BLL.Services.PromotionServices
         public void Edit(int id, PromotionToEditDto promotionDto)
         {
             var newName = _unitOfWork.SaveImageMethod(promotionDto.Image);
-            Promotion promotion = _unitOfWork.PromotionRepo.GetById(id);
+            Promotion? promotion = _unitOfWork.PromotionRepo.GetById(id);
             if (promotion == null) { return ; }
 
             promotion.Title = promotionDto.Title;
@@ -97,9 +97,9 @@ namespace Akelny.BLL.Services.PromotionServices
                 .ToList();
         }
 
-        public Promotion GetById(int id)
+        public Promotion? GetById(int id)
         {
-            Promotion promotion = _unitOfWork.PromotionRepo.GetById(id);
+            Promotion? promotion = _unitOfWork.PromotionRepo.GetById(id);
 
             if (promotion == null) { return null; }
 

@@ -96,15 +96,15 @@ namespace Akelny.BLL.Services.MealServices
                 SectionId = m.SectionId,
                 Section = new SectionDto
                 {
-                    Id = m.Section.Id,
+                    Id = m.Section!.Id,
                     Name = m.Section.Name
                 }
             }).ToList();
         }
 
-        public MealDto GetById(int id)
+        public MealDto? GetById(int id)
         {
-            Meal meal = _unitOfWork.MealRepo.GetMealById(id);
+            Meal? meal = _unitOfWork.MealRepo.GetMealById(id);
 
             if (meal == null) { return null; }
             var MealDto = new MealDto();
@@ -121,7 +121,7 @@ namespace Akelny.BLL.Services.MealServices
 
         public void Delete(int id)
         {
-            Meal meal = _unitOfWork.MealRepo.GetById(id);
+            Meal? meal = _unitOfWork.MealRepo.GetById(id);
 
             if (meal == null) { return; }
 
@@ -137,7 +137,7 @@ namespace Akelny.BLL.Services.MealServices
                 newName = _unitOfWork.SaveImageMethod(mealToEditDto.Image!);
 
             }
-            Meal meal = _unitOfWork.MealRepo.GetById(id);
+            Meal? meal = _unitOfWork.MealRepo.GetById(id);
 
             if (meal == null) { return; }
 

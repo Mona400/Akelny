@@ -13,7 +13,7 @@ public interface ISubService
     void ChangeState(Subscriptions foundSUb, Substate state);
     
 
-    List<SubsWithUser_Meals> GetAllByUserID(int userID);
+    List<SubsWithUser_Meals> GetAllByUserID(string userID);
 
     List<SubsWithUser_Meals> GetAll();
 
@@ -22,7 +22,7 @@ public interface ISubService
     SubsWithUser_Meals? GetSubByIDWithMeals(int subID);
 
     void Delete(Subscriptions foundSUb);
-    void Add(AddSubDto sub , int userID);
+    void Add(AddSubDto sub , string userID);
 
     Subscriptions? GetSubWithoutIncludes(int id);
 

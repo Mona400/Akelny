@@ -21,7 +21,7 @@ public class SubService : ISubService
         _unitOfWork = unitOfWork;
     }
 
-    public void Add(AddSubDto sub, int userID)
+    public void Add(AddSubDto sub, string userID)
     {
         var newSub = new Subscriptions
         {
@@ -54,6 +54,10 @@ public class SubService : ISubService
 
     public void AddMeals(SubsWithUser_Meals FoundSub, EditSubsDto subsDto)
     {
+        var OldSub = _unitOfWork.Subrepo.GetSubByID(FoundSub.Id);
+
+        if (OldSub is null) { return; }
+
         var meals_added = subsDto.Meals_and_Dates!.Select(en => new Meals_Dates
         {
             MealID = en.Meal_id,
@@ -62,7 +66,7 @@ public class SubService : ISubService
 
         });
 
-        var OldSub = _unitOfWork.Subrepo.GetSubByID(FoundSub.Id);
+       
 
         OldSub.Meals_Dates = (OldSub.Meals_Dates!.Concat(meals_added)).ToList();
         
@@ -80,8 +84,8 @@ public class SubService : ISubService
             RenewDate = en.RenewDate,
             TimeCreated = en.TimeCreated,
             SubState = en.Substate,
-            UserId = en.TestUserID,
-            UserName = en.user!.Username,
+            UserId = en.TestUserID!,
+            UserName = en.user!.UserName!,
             Meals_and_Dates = en.Meals_Dates!.Select(en => new MealsAndDatesDto
             {
                 Arrival_Time = en.Date,
@@ -90,7 +94,7 @@ public class SubService : ISubService
         }).ToList();
     }
 
-    public List<SubsWithUser_Meals> GetAllByUserID(int userID)
+    public List<SubsWithUser_Meals> GetAllByUserID(string userID)
     {
         return _unitOfWork.Subrepo.GetSubsByUserID(userID).Select(en => new SubsWithUser_Meals
         {
@@ -99,8 +103,8 @@ public class SubService : ISubService
             RenewDate=en.RenewDate,
             TimeCreated=en.TimeCreated,
             SubState=en.Substate,
-            UserId=en.TestUserID,
-            UserName=en.user!.Username,
+            UserId=en.TestUserID!,
+            UserName=en.user!.UserName!,
             Meals_and_Dates = en.Meals_Dates!.Select(en => new MealsAndDatesDto
             {
                 Arrival_Time = en.Date,
@@ -115,6 +119,8 @@ public class SubService : ISubService
     {
         var sub = _unitOfWork.Subrepo.GetSubByID(subID);
 
+        if(sub is null) { return null; }
+
         return new SubsWithUser_FullMeals
         {
             Id = sub.Id,
@@ -122,16 +128,16 @@ public class SubService : ISubService
             RenewDate = sub.RenewDate,
             TimeCreated = sub.TimeCreated,
             SubState = sub.Substate,
-            UserId = sub.TestUserID,
-            UserName = sub.user!.Username,
+            UserId = sub.TestUserID!,
+            UserName = sub.user!.UserName!,
             FullMeals_and_Dates = sub.Meals_Dates!.Select(en => new FullMeals_and_Dates
             {
                 Arrival_Time = en.Date,
                 M_id = en.MealID,
-                M_name = en.meal.Name,
-                M_description = en.meal.Description,
-                M_Price = en.meal.Price,
-                Rest_ID = en.meal.RestaurantId
+                M_name = en.Meal!.Name,
+                M_description = en.Meal.Description,
+                M_Price = en.Meal.Price,
+                Rest_ID = en.Meal.RestaurantId
 
             }).ToList()
 
@@ -143,6 +149,8 @@ public class SubService : ISubService
     {
         var sub = _unitOfWork.Subrepo.GetSubByID(subID);
 
+        if(sub is null) { return null; }
+
         return new SubsWithUser_Meals
         {
             Id = sub.Id,
@@ -150,8 +158,8 @@ public class SubService : ISubService
             RenewDate = sub.RenewDate,
             TimeCreated = sub.TimeCreated,
             SubState = sub.Substate,
-            UserId = sub.TestUserID,
-            UserName = sub.user!.Username,
+            UserId = sub.TestUserID!,
+            UserName = sub.user!.UserName!,
             Meals_and_Dates = sub.Meals_Dates!.Select(en => new MealsAndDatesDto
             {
                 Arrival_Time = en.Date,

@@ -14,9 +14,10 @@ namespace Akelny.DAL.Models
     public class Subscriptions
     {
         public int Id { get; set; }
-        public int TestUserID { get; set; }
 
-        public TestUser? user { get; set; }
+        public string? TestUserID { get; set; }
+
+        public User? user { get; set; }
 
         public Substate Substate { get; set; }
 

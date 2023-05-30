@@ -14,7 +14,7 @@ namespace Akelny.BLL.Services.PromotionServices
         void Add(PromotionToAddDto promotionToAddDto);
         void Edit(int id, PromotionToEditDto promotionToEditDto);
         void Delete(int id);
-        Promotion GetById(int id);
+        Promotion? GetById(int id);
 
     }
 }

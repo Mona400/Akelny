@@ -12,7 +12,7 @@ namespace Akelny.DAL.Repo.MealRepo
     {
         List<Meal> GetAllByResturantId(int? ResturantId);
         List<Meal> GetAllBySectionId(int? SectionId);
-       Meal GetMealById(int? MealId);
+       Meal? GetMealById(int? MealId);
 
     }
 }

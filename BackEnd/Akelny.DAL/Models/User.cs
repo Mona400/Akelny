@@ -17,7 +17,7 @@ namespace Akelny.DAL.Models
         public string UserType { get; set; } = string.Empty;
         public DateTime DOB { get; set; }
         public string? Address { get; set; } = string.Empty;
-        public ICollection<Subscriptions> subscriptions { get; set; } = new HashSet<Subscriptions>();
+        public ICollection<Subscriptions>? subscriptions { get; set; }
 
         public ICollection<Review> Reviews { get; set; } = new HashSet<Review>();
     }

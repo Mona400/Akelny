@@ -33,7 +33,7 @@ namespace Akelny.BLL.Services.SectionServices
 
         public void Delete(int id)
         {
-            Section section = _unitOfWork.SectionRepo.GetById(id);
+            Section? section = _unitOfWork.SectionRepo.GetById(id);
             if(section == null) { return; }
             if (section.Id != id)
                 return ;
@@ -43,7 +43,7 @@ namespace Akelny.BLL.Services.SectionServices
 
         public void Edit(int id, SectionToEditDto sectionDto)
         {
-            Section section = _unitOfWork.SectionRepo.GetById(id);
+            Section? section = _unitOfWork.SectionRepo.GetById(id);
             if (section == null) { return; }
             if (section.Id != id)
                 return ;
@@ -63,9 +63,9 @@ namespace Akelny.BLL.Services.SectionServices
            
         }
 
-        public SectionDto GetById(int id)
+        public SectionDto? GetById(int id)
         {
-            Section section = _unitOfWork.SectionRepo.GetById(id);
+            Section? section = _unitOfWork.SectionRepo.GetById(id);
 
             if (section == null) { return null; }
             var sectionDto = new SectionDto();

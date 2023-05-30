@@ -25,7 +25,7 @@ namespace Akelny.DAL.Repo.MealRepo
             var meals =  _context.Meals
              .Include(m=>m.Restaurant)
              .Include(m=>m.Section)
-             .Where(p => p.Restaurant.Id == ResturantId)
+             .Where(p => p.Restaurant!.Id == ResturantId)
             .ToList();
             return meals;
         }
@@ -34,12 +34,12 @@ namespace Akelny.DAL.Repo.MealRepo
         {
             var meals = _context.Meals
              .Include(m => m.Section)
-             .Where(m => m.Section.Id == SectionId)
+             .Where(m => m.Section!.Id == SectionId)
             .ToList();
             return meals;
         }
 
-        public Meal GetMealById(int? MealId)
+        public Meal? GetMealById(int? MealId)
         {
             var meal = _context.Meals
              .Include(m => m.Section)

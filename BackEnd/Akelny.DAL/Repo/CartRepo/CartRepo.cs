@@ -2,6 +2,7 @@
 using Akelny.DAL.Models;
 using Akelny.DAL.Repo.GenericRepo;
 using Microsoft.EntityFrameworkCore;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Akelny.DAL.Repo.CartRepo;
 
@@ -29,6 +30,14 @@ public class CartRepo : GenericRepo<Cart>, ICartRepo
 
     }
 
+    public List<Cart> GetAllCarts()
+    {
+        var carts = _context.Carts
+            .Include(m => m.Meals)
+           .ToList();
+        return carts;
+    }
+
     public Cart? GetCartById(int id)
     {
         var CartId = _context.Carts.Where(c => c.Id == id)
@@ -38,7 +47,7 @@ public class CartRepo : GenericRepo<Cart>, ICartRepo
         return CartId;
     }
 
-    public Cart? GetCartByUserId(int id)
+    public Cart? GetCartByUserId(string id)
     {
         var CartId = _context.Carts.Where(c => c.UserId == id)
              .Include(c => c.Meals)

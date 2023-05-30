@@ -1,0 +1,20 @@
+﻿using Akelny.DAL.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Akelny.DAL.Config
+{
+    public class SubConfiguration : IEntityTypeConfiguration<Subscriptions>
+    {
+        public void Configure(EntityTypeBuilder<Subscriptions> builder)
+        {
+            builder.HasOne(c => c.user).WithMany(us => us.subscriptions).HasForeignKey(en => en.TestUserID);
+        }
+    }
+}

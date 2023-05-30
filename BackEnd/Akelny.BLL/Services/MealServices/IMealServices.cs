@@ -19,7 +19,7 @@ namespace Akelny.BLL.Services.MealServices
         void AddMeal(MealToAddDto mealToAddDto);
         List<MealResturantDto> GetAllByResturantId(int? ResturantId);
         List<MealSectionDto> GetAllBySectionId(int? SectionId);
-       MealDto GetById(int id);
+       MealDto? GetById(int id);
         void Delete(int id);
         void Edit(int id, MealToEditDto mealToEditDto);
     }

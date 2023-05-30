@@ -10,8 +10,8 @@ namespace Akelny.BLL.Dto.UserDto
     public class TokenRequestDto
     {
         [Required]
-        public string Token { get; set; }
+        public string Token { get; set; } = string.Empty;
         [Required]
-        public string RefreshToken { get; set; }
+        public string RefreshToken { get; set; } = string.Empty;
     }
 }

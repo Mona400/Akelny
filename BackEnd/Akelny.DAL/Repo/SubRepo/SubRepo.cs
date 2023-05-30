@@ -25,10 +25,10 @@ public class SubRepo : GenericRepo<Subscriptions>, ISubRepo
 
     public Subscriptions? GetSubByID(int Subid)
     {
-        return _context.Subscriptions.Include(en => en.user).Include(en => en.Meals_Dates)!.ThenInclude(en => en.meal).FirstOrDefault(en => en.Id == Subid);
+        return _context.Subscriptions.Where(re => re.Id == Subid).Include(en => en.user).Include(en => en.Meals_Dates)!.ThenInclude(en => en.Meal).SingleOrDefault();
     }
 
-    public List<Subscriptions> GetSubsByUserID(int userID)
+    public List<Subscriptions> GetSubsByUserID(string userID)
     {
         return _context.Subscriptions.Where(en => en.TestUserID == userID).Include(en => en.user).Include(en => en.Meals_Dates).ToList();
     }

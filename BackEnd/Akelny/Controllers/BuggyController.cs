@@ -29,6 +29,7 @@ namespace Akelny.Controllers
         public IActionResult GetServerError()
         {
             var thing = _Context.Restaurant.Find(50);
+            if (thing == null) { return NoContent(); }
             var thingToReturn = thing.ToString();
             return Ok();
 

@@ -15,7 +15,7 @@ namespace Akelny.BLL.Dto.MealDto
         public string Description { get; set; } = string.Empty;
         public string Image { get; set; } = string.Empty;
         public decimal? Price { get; set; }
-        public ResturantDto Restaurant { get; set; }
-        public SectionDto Section { get; set; }
+        public ResturantDto? Restaurant { get; set; }
+        public SectionDto? Section { get; set; }
     }
 }

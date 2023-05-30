@@ -35,7 +35,7 @@ public class SubsWithUser_Meals
 
 
     public int Id { get; set; }
-    public int UserId { get; set; }
+    public string UserId { get; set; } = string.Empty;
     public string UserName { get; set; } = string.Empty;
 
     public decimal Monthly_price { get; set; }
@@ -56,7 +56,7 @@ public class SubsWithUser_FullMeals
 
 
     public int Id { get; set; }
-    public int UserId { get; set; }
+    public string UserId { get; set; } = string.Empty;
     public string UserName { get; set; } = string.Empty;
 
     public decimal Monthly_price { get; set; }

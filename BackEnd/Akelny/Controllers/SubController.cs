@@ -36,7 +36,7 @@ namespace Akelny.Controllers
 
         [HttpGet]
         [Route("users/{userID}/sub")]
-        public IActionResult GetAllByID(int userID)
+        public IActionResult GetAllByID(string userID)
         {
             var subs = _subService.GetAllByUserID(userID);
 
@@ -73,7 +73,7 @@ namespace Akelny.Controllers
 
         [HttpPost]
         [Route("users/{userID}/sub")]
-        public IActionResult Create(AddSubDto SubDto, int userID)
+        public IActionResult Create(AddSubDto SubDto, string userID)
         {
             //insert the getUserByID here
 
