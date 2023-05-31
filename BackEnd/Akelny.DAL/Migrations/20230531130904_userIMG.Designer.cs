@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Akelny.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230525094434_v1")]
-    partial class v1
+    [Migration("20230531130904_userIMG")]
+    partial class userIMG
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,12 +43,14 @@ namespace Akelny.DAL.Migrations
                     b.Property<string>("PaymentDetailsVisaNumber")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PaymentDetailsVisaNumber");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Carts");
                 });
@@ -136,14 +138,15 @@ namespace Akelny.DAL.Migrations
                     b.Property<int?>("CartId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("date");
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MealID")
                         .HasColumnType("int")
                         .HasColumnName("Meal_ID");
 
-                    b.Property<int>("SubscriptionsID")
+                    b.Property<int?>("SubscriptionsID")
                         .HasColumnType("int")
                         .HasColumnName("Sub_ID");
 
@@ -339,6 +342,9 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("RestId")
                         .HasColumnType("int");
 
@@ -413,17 +419,14 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TestUserID")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("TimeCreated")
                         .HasColumnType("datetime2(0)");
 
-                    b.Property<string>("userId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("userId");
+                    b.HasIndex("TestUserID");
 
                     b.ToTable("Subscriptions");
                 });
@@ -486,6 +489,9 @@ namespace Akelny.DAL.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -668,7 +674,13 @@ namespace Akelny.DAL.Migrations
                         .WithMany()
                         .HasForeignKey("PaymentDetailsVisaNumber");
 
+                    b.HasOne("Akelny.DAL.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("PaymentDetails");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
@@ -704,9 +716,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasOne("Akelny.DAL.Models.Subscriptions", "Subscriptions")
                         .WithMany("Meals_Dates")
-                        .HasForeignKey("SubscriptionsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubscriptionsID");
 
                     b.Navigation("Cart");
 
@@ -728,7 +738,7 @@ namespace Akelny.DAL.Migrations
                 {
                     b.HasOne("Akelny.DAL.Models.User", "user")
                         .WithMany("subscriptions")
-                        .HasForeignKey("userId");
+                        .HasForeignKey("TestUserID");
 
                     b.Navigation("user");
                 });

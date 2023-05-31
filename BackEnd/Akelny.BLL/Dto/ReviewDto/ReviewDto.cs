@@ -4,7 +4,7 @@ public class ReviewDto
 {
     public int Id { get; set; }
     public string UserName { get; set; } = string.Empty;
-
+    public string ProfileImg { get; set; } = string.Empty;
     public string UserId { get; set; } = string.Empty;
 
     public int RestId { get; set; }

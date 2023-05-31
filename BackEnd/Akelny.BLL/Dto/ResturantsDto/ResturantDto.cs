@@ -1,4 +1,5 @@
-﻿using Akelny.DAL.Models;
+﻿using Akelny.BLL.Dto.ReviewDto;
+using Akelny.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace Akelny.BLL.Dto.ResturantsDto
         public string Speciality { get; set; } = string.Empty;
         public decimal? Rating { get; set; }
         //public int MealId { get; set; }
-        //public ICollection<Meal>? Meal { get; set; } = new HashSet<Meal>();
+        //public ICollection<Meal>? Meal { get; set; } 
+
+        public ICollection<ReviewDto.ReviewDto>? Reviews { get; set; }
 
     }
 }

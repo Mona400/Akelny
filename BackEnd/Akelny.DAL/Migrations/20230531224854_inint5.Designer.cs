@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Akelny.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230525095505_v5")]
-    partial class v5
+    [Migration("20230531224854_inint5")]
+    partial class inint5
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -138,14 +138,15 @@ namespace Akelny.DAL.Migrations
                     b.Property<int?>("CartId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("date");
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MealID")
                         .HasColumnType("int")
                         .HasColumnName("Meal_ID");
 
-                    b.Property<int>("SubscriptionsID")
+                    b.Property<int?>("SubscriptionsID")
                         .HasColumnType("int")
                         .HasColumnName("Sub_ID");
 
@@ -277,7 +278,6 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("Rating")
@@ -300,7 +300,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 1,
                             Description = "Description1",
-                            Image = "",
+                            Image = "507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
                             Rating = 10.2m,
                             Speciality = "Speciality1",
                             Title = "Title1"
@@ -309,7 +309,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 2,
                             Description = "Description2",
-                            Image = "",
+                            Image = "507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
                             Rating = 10.2m,
                             Speciality = "Speciality2",
                             Title = "Title2"
@@ -318,7 +318,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 3,
                             Description = "Description3",
-                            Image = "",
+                            Image = "507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
                             Rating = 10.2m,
                             Speciality = "Speciality3",
                             Title = "Title3"
@@ -341,6 +341,9 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("RestId")
                         .HasColumnType("int");
 
@@ -356,6 +359,8 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RestId");
 
                     b.HasIndex("UserId");
 
@@ -485,6 +490,9 @@ namespace Akelny.DAL.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -710,8 +718,7 @@ namespace Akelny.DAL.Migrations
                     b.HasOne("Akelny.DAL.Models.Subscriptions", "Subscriptions")
                         .WithMany("Meals_Dates")
                         .HasForeignKey("SubscriptionsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Cart");
 
@@ -722,18 +729,27 @@ namespace Akelny.DAL.Migrations
 
             modelBuilder.Entity("Akelny.DAL.Models.Review", b =>
                 {
+                    b.HasOne("Akelny.DAL.Models.Restaurant", "Restaurant")
+                        .WithMany("Reviews")
+                        .HasForeignKey("RestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Akelny.DAL.Models.User", null)
                         .WithMany("Reviews")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Restaurant");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
                 {
                     b.HasOne("Akelny.DAL.Models.User", "user")
                         .WithMany("subscriptions")
-                        .HasForeignKey("TestUserID");
+                        .HasForeignKey("TestUserID")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("user");
                 });
@@ -812,6 +828,8 @@ namespace Akelny.DAL.Migrations
             modelBuilder.Entity("Akelny.DAL.Models.Restaurant", b =>
                 {
                     b.Navigation("Meals");
+
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>

@@ -9,7 +9,7 @@ namespace Akelny.DAL.Repo.CartRepo
         public Cart? GetCartById(int id);
         public void AddMealToCart(Meals_Dates meal, Cart cart);
         public void DeleteMealFromCart(Meals_Dates meal, Cart cart);
-
+        List<Cart> GetAllCarts();
 
     }
 }

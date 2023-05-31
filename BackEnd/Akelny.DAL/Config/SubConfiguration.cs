@@ -14,7 +14,8 @@ namespace Akelny.DAL.Config
     {
         public void Configure(EntityTypeBuilder<Subscriptions> builder)
         {
-            builder.HasOne(c => c.user).WithMany(us => us.subscriptions).HasForeignKey(en => en.TestUserID);
+            builder.HasOne(c => c.user).WithMany(us => us.subscriptions).HasForeignKey(en => en.TestUserID).OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(c => c.Meals_Dates).WithOne(me => me.Subscriptions).HasForeignKey(en => en.SubscriptionsID).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Akelny.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230525100446_v6")]
-    partial class v6
+    [Migration("20230531153105_inint3")]
+    partial class inint3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -146,7 +146,7 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Meal_ID");
 
-                    b.Property<int>("SubscriptionsID")
+                    b.Property<int?>("SubscriptionsID")
                         .HasColumnType("int")
                         .HasColumnName("Sub_ID");
 
@@ -342,6 +342,9 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("RestId")
                         .HasColumnType("int");
 
@@ -486,6 +489,9 @@ namespace Akelny.DAL.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -711,8 +717,7 @@ namespace Akelny.DAL.Migrations
                     b.HasOne("Akelny.DAL.Models.Subscriptions", "Subscriptions")
                         .WithMany("Meals_Dates")
                         .HasForeignKey("SubscriptionsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Cart");
 
@@ -734,7 +739,8 @@ namespace Akelny.DAL.Migrations
                 {
                     b.HasOne("Akelny.DAL.Models.User", "user")
                         .WithMany("subscriptions")
-                        .HasForeignKey("TestUserID");
+                        .HasForeignKey("TestUserID")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("user");
                 });

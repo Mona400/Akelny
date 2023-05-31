@@ -88,6 +88,7 @@ namespace Akelny.BLL.Services.PromotionServices
                     Hours= d.Hours,
                     Minutes=d.Minutes,
                     Seconds= d.Seconds,
+                    ImageUrl=d.ImageUrl,
                     PriceAfter= d.PriceAfter,
                     PriceBefore= d.PriceBefore,
                  

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BgK2x/w6aOHlRTPWHb6MdKUecfu6XyCq38EVPquVOgs=",
+  "Hash": "peqbKI5NUt1VyllvR/R7lhi4JfEActMsxdT90gGzdXU=",
   "Source": "Akelny",
   "BasePath": "_content/Akelny",
   "Mode": "Default",
@@ -1071,6 +1071,23 @@
       "OriginalItemSpec": "wwwroot\\349e4d73-c73c-4e3a-b080-98986376aecd.png"
     },
     {
+      "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\3b1e2d93-2a28-48db-8c2f-293add1f7f47.png",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "3b1e2d93-2a28-48db-8c2f-293add1f7f47.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\3b1e2d93-2a28-48db-8c2f-293add1f7f47.png"
+    },
+    {
       "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\4018d117-63c5-43a6-8dc6-006dd95c022b.png",
       "SourceId": "Akelny",
       "SourceType": "Discovered",
@@ -1137,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\59cda4b7-6ea9-4bc0-affd-9b41f34626e7.png"
+    },
+    {
+      "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\5e142497-96a0-4db4-ad1b-ca16c3a56fe4.jpg",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "5e142497-96a0-4db4-ad1b-ca16c3a56fe4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\5e142497-96a0-4db4-ad1b-ca16c3a56fe4.jpg"
     },
     {
       "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\6876b982-c9bb-4388-8464-c05f60797033.png",
@@ -1207,12 +1241,12 @@
       "OriginalItemSpec": "wwwroot\\828c9d61-a981-4c87-a56b-ecdffb44207a.png"
     },
     {
-      "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\c0fe6d2d-b684-4795-8fc9-9709b79bdc9b.png",
+      "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\a51714d7-e4b6-4f10-8319-de039bb421fd.png",
       "SourceId": "Akelny",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
       "BasePath": "_content/Akelny",
-      "RelativePath": "c0fe6d2d-b684-4795-8fc9-9709b79bdc9b.png",
+      "RelativePath": "a51714d7-e4b6-4f10-8319-de039bb421fd.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1221,7 +1255,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\c0fe6d2d-b684-4795-8fc9-9709b79bdc9b.png"
+      "OriginalItemSpec": "wwwroot\\a51714d7-e4b6-4f10-8319-de039bb421fd.png"
+    },
+    {
+      "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\a5bb8df7-8b04-46aa-a1e4-783b65ae0229.jpg",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "a5bb8df7-8b04-46aa-a1e4-783b65ae0229.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\a5bb8df7-8b04-46aa-a1e4-783b65ae0229.jpg"
     },
     {
       "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\c1191a18-dacc-4d80-a1ed-d9b5ddd0411a.png",
@@ -1290,6 +1341,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\e6252ff7-05c9-4781-b997-a1bb77f837d1.png"
+    },
+    {
+      "Identity": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\test.png",
+      "SourceId": "Akelny",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\wwwroot\\",
+      "BasePath": "_content/Akelny",
+      "RelativePath": "test.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\test.png"
     }
   ]
 }

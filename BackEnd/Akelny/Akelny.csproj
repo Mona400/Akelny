@@ -21,8 +21,4 @@
     <ProjectReference Include="..\Akelny.BLL\Akelny.BLL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
 </Project>

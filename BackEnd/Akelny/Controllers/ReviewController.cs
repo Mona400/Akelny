@@ -20,9 +20,10 @@ public class ReviewController : ControllerBase
 
     }
     [HttpPost]
-    public ActionResult Add(ReviewToAddDto reviewToAddDto)
+    public async Task<ActionResult> Add(ReviewToAddDto reviewToAddDto)
     {
-        _reviewService.Add(reviewToAddDto);
+
+       var isSucceeded = await _reviewService.Add(reviewToAddDto);
         return Ok("Review Added Successfully");
     }
     [HttpPut]
