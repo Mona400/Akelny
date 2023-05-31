@@ -5055,6 +5055,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Akelny.BLL >= 1.0.0",
+      "Akelny.DAL >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.5",
       "Microsoft.AspNetCore.OpenApi >= 7.0.3",
@@ -5091,6 +5092,9 @@
           "projectReferences": {
             "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
               "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj"
+            },
+            "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+              "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
             }
           }
         }

@@ -9,6 +9,7 @@
       "Akelny/1.0.0": {
         "dependencies": {
           "Akelny.BLL": "1.0.0",
+          "Akelny.DAL": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.5",
           "Microsoft.AspNetCore.Identity.UI": "7.0.5",
           "Microsoft.AspNetCore.OpenApi": "7.0.3",

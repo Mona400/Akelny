@@ -143,7 +143,7 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Meal_ID");
 
-                    b.Property<int>("SubscriptionsID")
+                    b.Property<int?>("SubscriptionsID")
                         .HasColumnType("int")
                         .HasColumnName("Sub_ID");
 
@@ -707,9 +707,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasOne("Akelny.DAL.Models.Subscriptions", "Subscriptions")
                         .WithMany("Meals_Dates")
-                        .HasForeignKey("SubscriptionsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubscriptionsID");
 
                     b.Navigation("Cart");
 

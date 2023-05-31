@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Akelny.BLL\Akelny.BLL.csproj" />
+    <ProjectReference Include="..\Akelny.DAL\Akelny.DAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

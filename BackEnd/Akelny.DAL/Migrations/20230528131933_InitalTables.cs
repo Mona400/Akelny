@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Akelny.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class v1 : Migration
+    public partial class InitalTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -279,8 +279,7 @@ namespace Akelny.DAL.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    userId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    TestUserID = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TestUserID = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Substate = table.Column<int>(type: "int", nullable: false),
                     Monthly_Price = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
                     TimeCreated = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
@@ -290,8 +289,8 @@ namespace Akelny.DAL.Migrations
                 {
                     table.PrimaryKey("PK_Subscriptions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Subscriptions_AspNetUsers_userId",
-                        column: x => x.userId,
+                        name: "FK_Subscriptions_AspNetUsers_TestUserID",
+                        column: x => x.TestUserID,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                 });
@@ -302,7 +301,7 @@ namespace Akelny.DAL.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     MonthlyPrice = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
                     Discount = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PaymentDetailsVisaNumber = table.Column<string>(type: "nvarchar(450)", nullable: true)
@@ -310,6 +309,11 @@ namespace Akelny.DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Carts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Carts_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Carts_PaymentDetails_PaymentDetailsVisaNumber",
                         column: x => x.PaymentDetailsVisaNumber,
@@ -378,7 +382,7 @@ namespace Akelny.DAL.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Sub_ID = table.Column<int>(type: "int", nullable: false),
-                    Date = table.Column<DateTime>(type: "date", nullable: false),
+                    Date = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Meal_ID = table.Column<int>(type: "int", nullable: false),
                     CartId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -479,6 +483,11 @@ namespace Akelny.DAL.Migrations
                 column: "PaymentDetailsVisaNumber");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Carts_UserId",
+                table: "Carts",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Meals_RestaurantId",
                 table: "Meals",
                 column: "RestaurantId");
@@ -514,9 +523,9 @@ namespace Akelny.DAL.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Subscriptions_userId",
+                name: "IX_Subscriptions_TestUserID",
                 table: "Subscriptions",
-                column: "userId");
+                column: "TestUserID");
         }
 
         /// <inheritdoc />
