@@ -22,8 +22,4 @@
     <ProjectReference Include="..\Akelny.DAL\Akelny.DAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
 </Project>

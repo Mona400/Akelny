@@ -43,9 +43,9 @@ namespace Akelny.Controllers
         }
         [HttpDelete]
         [Route("{id}")]
-        public ActionResult<PromotionDto> Delete(int id, PromotionDto promotionDto)
+        public ActionResult<PromotionDto> Delete(int id)
         {
-            if (promotionDto.Id != id) return NotFound(new { Message = "No Department Found!!" });
+            if (_promotionServices.GetById(id) == null ) return NotFound(new { Message = "No Department Found!!" });
 
             _promotionServices.Delete(id);
             return CreatedAtAction(

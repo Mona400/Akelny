@@ -37,12 +37,13 @@ namespace Akelny.DAL.Context
             modelBuilder.ApplyConfiguration(new MealConfiguration());
             modelBuilder.ApplyConfiguration(new SectionConfiguration());
             modelBuilder.ApplyConfiguration(new SubConfiguration());
+            modelBuilder.ApplyConfiguration(new SubConfiguration());
             modelBuilder.Entity<User>().Property(c => c.DOB).HasColumnType("date");
 
             var restaurants = JsonSerializer.Deserialize<List<Restaurant>>(@"[
-    {""Id"":1,""Title"":""Title1"",""Description"":""Description1"",""Speciality"":""Speciality1"",""Rating"":10.2},
-    {""Id"":2,""Title"":""Title2"",""Description"":""Description2"",""Speciality"":""Speciality2"",""Rating"":10.2},
-    {""Id"":3,""Title"":""Title3"",""Description"":""Description3"",""Speciality"":""Speciality3"",""Rating"":10.2}
+    {""Id"":1,""Title"":""Title1"",""Description"":""Description1"",""Speciality"":""Speciality1"",""Rating"":10.2 , ""Image"":""507a9056-bf91-4616-8036-f8443aaf41d7.jpg""},
+    {""Id"":2,""Title"":""Title2"",""Description"":""Description2"",""Speciality"":""Speciality2"",""Rating"":10.2 , ""Image"":""507a9056-bf91-4616-8036-f8443aaf41d7.jpg""},
+    {""Id"":3,""Title"":""Title3"",""Description"":""Description3"",""Speciality"":""Speciality3"",""Rating"":10.2 , ""Image"":""507a9056-bf91-4616-8036-f8443aaf41d7.jpg""}
 ]") ?? new List<Restaurant>();
 
             var sections = JsonSerializer.Deserialize<List<Section>>(@"[

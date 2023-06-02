@@ -1,4 +1,6 @@
 ﻿using Akelny.BLL.Dto.CartDto;
+using Akelny.BLL.Dto.MealDto;
+using Akelny.BLL.Dto.SubDto;
 using Akelny.BLL.Services.CartServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -45,6 +47,7 @@ namespace Akelny.Controllers
         public IActionResult GryByID(int id)
         {
             var cart = _cartService.GetById(id);
+<<<<<<< HEAD
             if(cart== null) { return NotFound("Cart Doesn't Exists"); }
             return Ok( new CartDto
             {
@@ -55,6 +58,34 @@ namespace Akelny.Controllers
                 PaymentDetails= cart.PaymentDetails,
                 UserId = cart.UserId
             });
+=======
+
+            if(cart is null) { return NotFound("Card Was'nt found"); }
+            return Ok(cart);
+            
+
+        }
+
+        [HttpGet("ByCartID/{id}")]
+        public IActionResult GetByCartID(int id)
+        {
+            var cart = _cartService.GetAllMealByCartID(id);
+
+            if (cart is null) { return NotFound("Card Was'nt found"); }
+            return Ok(cart);
+
+
+        }
+
+        [HttpPatch("AddMeals/{cartID}")]
+        public IActionResult AddMeals(int cartID , List<MealsAndDatesDto> mdto)
+        {
+            var cart = _cartService.AddMealsToCart(cartID ,mdto);
+
+                if(cart is null) { return NotFound("Cart not found"); }
+            return Ok(cart);
+
+>>>>>>> main
 
         }
 

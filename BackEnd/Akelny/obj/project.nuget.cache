@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "oixVOA9FCAD8jn2JHjQoc3hSKkjE836VLRM75gr1E0WDygc1dJ74ElJEC5o/A2OjUIU/F+gHfsbaabdpndRX4Q==",
+=======
+  "dgSpecHash": "B8WqDRvS43K1Q4x6S3qiwiaOTRoWztyFlWMivDY+TzvMzaEvwChmDCtenkeoBmJ7QRoNAR0T1y58HZxTg+R0MA==",
+>>>>>>> main
   "success": true,
   "projectFilePath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
   "expectedPackageFiles": [

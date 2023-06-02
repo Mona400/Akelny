@@ -5,8 +5,9 @@ namespace Akelny.BLL.Services.Reviewservice;
 public interface IReviewService
 {
     List<ReviewDto> GetAll();
-    void Add(ReviewToAddDto reviewDto);
+    Task<bool> Add(ReviewToAddDto reviewDto);
     int? Edit(int id, ReviewToEditdto reviewToEditdto);
     int? Delete(int id);
+
     public ReviewDto? GetById(int id);
 }

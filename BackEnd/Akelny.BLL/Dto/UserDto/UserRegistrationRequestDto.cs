@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -17,6 +18,8 @@ namespace Akelny.BLL.Dto.UserDto
         public string Password{ get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
+
+        public IFormFile? ProfileImg { get; set; }
         public bool IsEmailVerified { get; set; }
         public string UserType { get; set; } = string.Empty;
         public DateTime DOB { get; set; }

@@ -1,25 +1,32 @@
 ﻿using Akelny.BLL.Dto.ReviewDto;
 using Akelny.DAL.Models;
 using Akelny.DAL.UnitOfWork;
+using Microsoft.AspNetCore.Identity;
 
 namespace Akelny.BLL.Services.Reviewservice;
 
 public class ReviewService : IReviewService
 {
     private readonly IUnitOfWork _unitOfWork;
-
-    public ReviewService(IUnitOfWork unitOfWork)
+    private readonly UserManager<User> _usermanager;
+    public ReviewService(IUnitOfWork unitOfWork , UserManager<User> userManager)
     {
         _unitOfWork = unitOfWork;
+        _usermanager = userManager;
     }
 
-    void IReviewService.Add(ReviewToAddDto reviewDto)
+    async Task<bool> IReviewService.Add(ReviewToAddDto reviewDto)
     {
+        var FoundUser = await _usermanager.FindByIdAsync(reviewDto.UserId);
+
+        if(FoundUser is null) { return false; }
+
         var review = new Review
         {
             Comment = reviewDto.Comment,
             Impression = reviewDto.Impression,
-            UserName = reviewDto.UserName,
+            UserName = FoundUser.UserName! ,
+            ProfileImg = FoundUser.ProfileImg,
             RestId = reviewDto.RestId,
             UserId = reviewDto.UserId,
             TimeCreated = reviewDto.TimeCreated,
@@ -27,6 +34,8 @@ public class ReviewService : IReviewService
         };
         _unitOfWork.ReviewRepo.Add(review);
         _unitOfWork.ReviewRepo.SaveChanges();
+
+        return true;
 
     }
 
