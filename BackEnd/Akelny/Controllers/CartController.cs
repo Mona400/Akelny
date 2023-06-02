@@ -47,7 +47,7 @@ namespace Akelny.Controllers
         public IActionResult GryByID(int id)
         {
             var cart = _cartService.GetById(id);
-<<<<<<< HEAD
+
             if(cart== null) { return NotFound("Cart Doesn't Exists"); }
             return Ok( new CartDto
             {
@@ -58,10 +58,7 @@ namespace Akelny.Controllers
                 PaymentDetails= cart.PaymentDetails,
                 UserId = cart.UserId
             });
-=======
 
-            if(cart is null) { return NotFound("Card Was'nt found"); }
-            return Ok(cart);
             
 
         }
@@ -85,7 +82,6 @@ namespace Akelny.Controllers
                 if(cart is null) { return NotFound("Cart not found"); }
             return Ok(cart);
 
->>>>>>> main
 
         }
 

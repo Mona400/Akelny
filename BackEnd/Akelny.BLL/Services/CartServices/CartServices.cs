@@ -27,7 +27,7 @@ public class CartServices : ICartService
         _unitOfWork.CartRepo.SaveChanges();
     }
 
-    public OneCardDto AddMealsToCart(int cartID, List<MealsAndDatesDto> mdto)
+    public OneCardDto? AddMealsToCart(int cartID, List<MealsAndDatesDto> mdto)
     {
         var cart = _unitOfWork.CartRepo.GetCartById(cartID);
 
@@ -91,15 +91,9 @@ public class CartServices : ICartService
         return carts.Select(m => new CartDto
         {
             Id = m.Id,
-<<<<<<< HEAD
+
             Meals = m.Meals!.Select(me => new MealsAndDatesDto { Meal_id=me.MealID , Arrival_Time = me.Date}).ToList(),
-=======
-            Meals = m.Meals!.Select(en => new MealsAndDatesDto
-            {
-                Meal_id = en.MealID,
-                Arrival_Time = en.Date
-            }).ToList(),
->>>>>>> main
+
             Discount = m.Discount,
             MonthlyPrice = m.MonthlyPrice,
         
@@ -126,32 +120,21 @@ public class CartServices : ICartService
         Cart? cart = _unitOfWork.CartRepo.GetCartById(id);
 
         if (cart == null) { return null; }
-        var CartDto = new OneCardDto
-        {
-            Discount = cart.Discount,
-            MonthlyPrice = cart.MonthlyPrice,
-            Id = cart.Id,
-            Meals = cart.Meals!.Select(en => new MealsAndDatesDto
-            {
-                Arrival_Time = en.Date,
-                Meal_id = en.MealID
+        var CartDto = new OneCardDto();
+       
 
-<<<<<<< HEAD
         CartDto.Id = cart.Id;
         CartDto.Meals = cart.Meals!.Select(me => new MealsAndDatesDto { Meal_id = me.MealID, Arrival_Time = me.Date }).ToList();
         CartDto.Discount = cart.Discount;
         CartDto.MonthlyPrice = cart.MonthlyPrice;
         CartDto.PaymentDetails = cart.PaymentDetails;
         CartDto.UserId = cart.UserId;
-=======
-            }).ToList(),
-            PaymentDetails = cart.PaymentDetails,
-            UserId = cart.UserId,
 
-        };
+           
+
         
-    
->>>>>>> main
+        
+
         return CartDto;
     }
 

@@ -180,12 +180,9 @@
             "projectReferences": {
               "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
                 "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj"
-<<<<<<< HEAD
               },
               "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
                 "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
-=======
->>>>>>> main
               }
             }
           }

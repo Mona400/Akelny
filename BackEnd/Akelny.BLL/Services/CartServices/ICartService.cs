@@ -19,5 +19,5 @@ public interface ICartService
 
     public List<MealsAndDatesDto>? GetAllMealByCartID(int cartID);
 
-    public OneCardDto AddMealsToCart(int cartID, List<MealsAndDatesDto> mdto);
+    public OneCardDto? AddMealsToCart(int cartID, List<MealsAndDatesDto> mdto);
 }
