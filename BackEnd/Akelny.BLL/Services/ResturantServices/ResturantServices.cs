@@ -90,6 +90,9 @@ namespace Akelny.BLL.Services.ResturantServices
         public ResturantDto? GetById(int id)
         {
             Restaurant? restaurant = _unitOfWork.ResturantRepo.GetResturantById(id);
+            var meals = _unitOfWork.MealRepo.GetAllByResturantId(id);
+
+       
 
             if (restaurant == null) { return null; }
             var resturantDto = new ResturantDto();
@@ -99,6 +102,16 @@ namespace Akelny.BLL.Services.ResturantServices
             resturantDto.Rating = restaurant.Rating;
             resturantDto.Speciality = restaurant.Speciality;
             resturantDto.Image = restaurant.Image!;
+            resturantDto.Meal = meals.Take(4).Select(meal => new MealDto
+            {
+                Description= meal.Description,
+                Id= meal.Id,
+                Image= meal.Image,
+                Name= meal.Name,
+                Price= meal.Price,
+                RestaurantId= restaurant.Id,
+                SectionId = meal.SectionId,
+            }).ToList();
             resturantDto.Reviews = restaurant.Reviews?.Select(re => new ReviewDto
             {
                 Comment = re.Comment,
