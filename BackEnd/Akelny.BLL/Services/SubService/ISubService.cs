@@ -19,12 +19,12 @@ public interface ISubService
 
     SubsWithUser_FullMeals? GetSubByID(int subID);
 
-    SubsWithUser_Meals? GetSubByIDWithMeals(int subID);
+    int? GetSubByIDWithMeals(int subID , EditSubsDto subsDto);
 
     void Delete(Subscriptions foundSUb);
     void Add(AddSubDto sub , string userID);
 
     Subscriptions? GetSubWithoutIncludes(int id);
 
-    void AddMeals(SubsWithUser_Meals FoundSub, EditSubsDto subsDto);
+    void AddMeals(SubsWithUser_Meals FoundSub, EditSubsDto subsDto , Subscriptions OldSub);
 }

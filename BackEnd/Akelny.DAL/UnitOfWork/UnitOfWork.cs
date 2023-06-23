@@ -1,10 +1,12 @@
 ﻿using Akelny.DAL.Repo.CartRepo;
 using Akelny.DAL.Repo.MealRepo;
+using Akelny.DAL.Repo.Meals_Dates_Repo;
 using Akelny.DAL.Repo.PromotionRepo;
 using Akelny.DAL.Repo.ResturantRepo;
 using Akelny.DAL.Repo.ReviewRepo;
 using Akelny.DAL.Repo.SectionRepo;
 using Akelny.DAL.Repo.SubRepo;
+using Akelny.DAL.Repo.UserRepo;
 using Microsoft.AspNetCore.Http;
 
 namespace Akelny.DAL.UnitOfWork
@@ -17,8 +19,12 @@ namespace Akelny.DAL.UnitOfWork
         public IResturantRepo ResturantRepo { get; }
         public ICartRepo CartRepo { get; }
         public ISubRepo Subrepo { get; }
+        public IUserRepo UserRepo { get; }
         public IReviewRepo ReviewRepo { get; }
-        public UnitOfWork( ICartRepo cartRepo ,ISubRepo subRepo, IPromotionRepo promotionRepo, ISectionRepo sectionRepo, IMealRepo mealRepo, IResturantRepo resturantRepo, IReviewRepo reviewRepo)
+
+        public IMealsDateRepo MealsDateRepo { get; }
+
+        public UnitOfWork( IMealsDateRepo _mealsDateRepo ,IUserRepo _userRepo , ICartRepo cartRepo ,ISubRepo subRepo, IPromotionRepo promotionRepo, ISectionRepo sectionRepo, IMealRepo mealRepo, IResturantRepo resturantRepo, IReviewRepo reviewRepo)
         {
             PromotionRepo = promotionRepo;
             SectionRepo = sectionRepo;
@@ -26,7 +32,9 @@ namespace Akelny.DAL.UnitOfWork
             MealRepo = mealRepo;
             ResturantRepo = resturantRepo;
             Subrepo = subRepo;
+            MealsDateRepo = _mealsDateRepo;
             ReviewRepo = reviewRepo;
+            UserRepo = _userRepo; 
         }
 
         public string SaveImageMethod(IFormFile? image)

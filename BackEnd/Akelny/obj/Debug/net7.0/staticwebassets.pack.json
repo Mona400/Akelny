@@ -1,64 +1,192 @@
 {
   "Files": [
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\233578d8-3f8f-4512-8cd7-a2bd0ee0387d.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\06243235-e906-4e36-8afb-eedb37a330f0.png",
+      "PackagePath": "staticwebassets\\06243235-e906-4e36-8afb-eedb37a330f0.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\13a1b9c6-a513-4804-b26d-a5a798b34b5a.jpg",
+      "PackagePath": "staticwebassets\\13a1b9c6-a513-4804-b26d-a5a798b34b5a.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\16bfa49a-23f4-485c-b507-68e25d4964d9.png",
+      "PackagePath": "staticwebassets\\16bfa49a-23f4-485c-b507-68e25d4964d9.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\1f2a3ea1-d76d-49f6-b269-4abb63a2cc07.png",
+      "PackagePath": "staticwebassets\\1f2a3ea1-d76d-49f6-b269-4abb63a2cc07.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\1f4bb17b-d750-4dd9-acc0-4c726bcd90cf.jpg",
+      "PackagePath": "staticwebassets\\1f4bb17b-d750-4dd9-acc0-4c726bcd90cf.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\233578d8-3f8f-4512-8cd7-a2bd0ee0387d.png",
       "PackagePath": "staticwebassets\\233578d8-3f8f-4512-8cd7-a2bd0ee0387d.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\349e4d73-c73c-4e3a-b080-98986376aecd.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\349e4d73-c73c-4e3a-b080-98986376aecd.png",
       "PackagePath": "staticwebassets\\349e4d73-c73c-4e3a-b080-98986376aecd.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\4018d117-63c5-43a6-8dc6-006dd95c022b.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\3853faf7-c564-4d20-bd81-b10d414a4b0e.jpg",
+      "PackagePath": "staticwebassets\\3853faf7-c564-4d20-bd81-b10d414a4b0e.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\3b1e2d93-2a28-48db-8c2f-293add1f7f47.png",
+      "PackagePath": "staticwebassets\\3b1e2d93-2a28-48db-8c2f-293add1f7f47.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\4018d117-63c5-43a6-8dc6-006dd95c022b.png",
       "PackagePath": "staticwebassets\\4018d117-63c5-43a6-8dc6-006dd95c022b.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
       "PackagePath": "staticwebassets\\507a9056-bf91-4616-8036-f8443aaf41d7.jpg"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\59659d37-ce37-48b7-952a-baeb1feabc69.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\5679fdf9-2d96-4b06-9980-2e134c1b5699.jpg",
+      "PackagePath": "staticwebassets\\5679fdf9-2d96-4b06-9980-2e134c1b5699.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\59659d37-ce37-48b7-952a-baeb1feabc69.png",
       "PackagePath": "staticwebassets\\59659d37-ce37-48b7-952a-baeb1feabc69.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\59cda4b7-6ea9-4bc0-affd-9b41f34626e7.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\59885800-a93f-4f5b-8a79-e86a46e75ac7.png",
+      "PackagePath": "staticwebassets\\59885800-a93f-4f5b-8a79-e86a46e75ac7.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\59cda4b7-6ea9-4bc0-affd-9b41f34626e7.png",
       "PackagePath": "staticwebassets\\59cda4b7-6ea9-4bc0-affd-9b41f34626e7.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\6876b982-c9bb-4388-8464-c05f60797033.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\5e142497-96a0-4db4-ad1b-ca16c3a56fe4.jpg",
+      "PackagePath": "staticwebassets\\5e142497-96a0-4db4-ad1b-ca16c3a56fe4.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\60168331-83a6-44cb-b595-f93fd2d1f6b3.jpg",
+      "PackagePath": "staticwebassets\\60168331-83a6-44cb-b595-f93fd2d1f6b3.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\662df699-29e7-4163-b2f8-900cf02535f7.jpg",
+      "PackagePath": "staticwebassets\\662df699-29e7-4163-b2f8-900cf02535f7.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\6876b982-c9bb-4388-8464-c05f60797033.png",
       "PackagePath": "staticwebassets\\6876b982-c9bb-4388-8464-c05f60797033.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\6bc46b35-605f-471b-9c88-d458a9b9bb11.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\692cf556-8e58-45de-87d4-d1d2e2dc6b92.jpg",
+      "PackagePath": "staticwebassets\\692cf556-8e58-45de-87d4-d1d2e2dc6b92.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\6bc46b35-605f-471b-9c88-d458a9b9bb11.png",
       "PackagePath": "staticwebassets\\6bc46b35-605f-471b-9c88-d458a9b9bb11.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\8137289d-9bb8-48af-a41c-34c1408af668.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\7a10f0dd-b5da-484a-a9cd-d8c1385d25c1.png",
+      "PackagePath": "staticwebassets\\7a10f0dd-b5da-484a-a9cd-d8c1385d25c1.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\7ac8fb8f-617c-4f27-8f73-a4150c82d965.jpg",
+      "PackagePath": "staticwebassets\\7ac8fb8f-617c-4f27-8f73-a4150c82d965.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\7eeb767b-dfcf-4a1f-aef8-dda795f59922.png",
+      "PackagePath": "staticwebassets\\7eeb767b-dfcf-4a1f-aef8-dda795f59922.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\8137289d-9bb8-48af-a41c-34c1408af668.png",
       "PackagePath": "staticwebassets\\8137289d-9bb8-48af-a41c-34c1408af668.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\828c9d61-a981-4c87-a56b-ecdffb44207a.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\828c9d61-a981-4c87-a56b-ecdffb44207a.png",
       "PackagePath": "staticwebassets\\828c9d61-a981-4c87-a56b-ecdffb44207a.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\c0fe6d2d-b684-4795-8fc9-9709b79bdc9b.png",
-      "PackagePath": "staticwebassets\\c0fe6d2d-b684-4795-8fc9-9709b79bdc9b.png"
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\8e86ed00-3327-4cd2-98ac-277778d3b6ff.png",
+      "PackagePath": "staticwebassets\\8e86ed00-3327-4cd2-98ac-277778d3b6ff.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\c1191a18-dacc-4d80-a1ed-d9b5ddd0411a.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\99905abc-2d3c-4aa5-b3f7-e2137f6dcf07.jpg",
+      "PackagePath": "staticwebassets\\99905abc-2d3c-4aa5-b3f7-e2137f6dcf07.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\9dbecf3d-5732-43bd-8846-f824fc1121bf.png",
+      "PackagePath": "staticwebassets\\9dbecf3d-5732-43bd-8846-f824fc1121bf.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\a51714d7-e4b6-4f10-8319-de039bb421fd.png",
+      "PackagePath": "staticwebassets\\a51714d7-e4b6-4f10-8319-de039bb421fd.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\a5bb8df7-8b04-46aa-a1e4-783b65ae0229.jpg",
+      "PackagePath": "staticwebassets\\a5bb8df7-8b04-46aa-a1e4-783b65ae0229.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\ae9b02de-3e9e-4e06-b729-2384ffa0fb4b.jpg",
+      "PackagePath": "staticwebassets\\ae9b02de-3e9e-4e06-b729-2384ffa0fb4b.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\b27d9492-ea8f-4f1a-a548-91e80c5a004e.png",
+      "PackagePath": "staticwebassets\\b27d9492-ea8f-4f1a-a548-91e80c5a004e.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\b712550c-7662-4fab-9987-fa70f8d99858.jpg",
+      "PackagePath": "staticwebassets\\b712550c-7662-4fab-9987-fa70f8d99858.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\b78e1538-b98c-4abb-b812-0ea772c43b6e.png",
+      "PackagePath": "staticwebassets\\b78e1538-b98c-4abb-b812-0ea772c43b6e.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\c1191a18-dacc-4d80-a1ed-d9b5ddd0411a.png",
       "PackagePath": "staticwebassets\\c1191a18-dacc-4d80-a1ed-d9b5ddd0411a.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\c6b966c8-6511-48f4-9ad8-672546ca8836.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\c6b966c8-6511-48f4-9ad8-672546ca8836.png",
       "PackagePath": "staticwebassets\\c6b966c8-6511-48f4-9ad8-672546ca8836.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\d3fa27a8-349c-4284-86b9-1888818db095.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\c8b94f5a-853b-4c1d-ba9c-3e1d7bc76e3c.jpg",
+      "PackagePath": "staticwebassets\\c8b94f5a-853b-4c1d-ba9c-3e1d7bc76e3c.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\cc3a75ea-b32d-4790-a24d-bd3cc9b421af.png",
+      "PackagePath": "staticwebassets\\cc3a75ea-b32d-4790-a24d-bd3cc9b421af.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\cf0ac33c-008b-4cd2-9a8f-eb007ce5cc7b.jpg",
+      "PackagePath": "staticwebassets\\cf0ac33c-008b-4cd2-9a8f-eb007ce5cc7b.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\d3fa27a8-349c-4284-86b9-1888818db095.png",
       "PackagePath": "staticwebassets\\d3fa27a8-349c-4284-86b9-1888818db095.png"
     },
     {
-      "Id": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\wwwroot\\e6252ff7-05c9-4781-b997-a1bb77f837d1.png",
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\dd98a8fe-6f93-4ed9-b07c-df929bf5a885.jpg",
+      "PackagePath": "staticwebassets\\dd98a8fe-6f93-4ed9-b07c-df929bf5a885.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\e6252ff7-05c9-4781-b997-a1bb77f837d1.png",
       "PackagePath": "staticwebassets\\e6252ff7-05c9-4781-b997-a1bb77f837d1.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\e9049b56-8bff-4b02-adfc-3c85cb453a90.jpg",
+      "PackagePath": "staticwebassets\\e9049b56-8bff-4b02-adfc-3c85cb453a90.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\ee1a9c65-1c31-476e-8fc2-eee66680379e.jpg",
+      "PackagePath": "staticwebassets\\ee1a9c65-1c31-476e-8fc2-eee66680379e.jpg"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\test.png",
+      "PackagePath": "staticwebassets\\test.png"
+    },
+    {
+      "Id": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\Akelny\\Akelny\\wwwroot\\test_sand.jpg",
+      "PackagePath": "staticwebassets\\test_sand.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Akelny.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -17,6 +17,8 @@ namespace Akelny.BLL.Dto.CartDto
         public decimal MonthlyPrice { get; set; }
         public string Discount { get; set; } = string.Empty;
         public ICollection<MealsAndDatesDto>? Meals { get; set; }
-        //public PaymentDetails? PaymentDetails { get; set; }
+
+        public PaymentDetails? PaymentDetails { get; set; }
+
     }
 }

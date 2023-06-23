@@ -14,10 +14,7 @@ namespace Akelny.BLL.Dto.PromotionDto
 
         public IFormFile? Image { get; set; }
         public DateTime date { get; set; }
-        public int days { get; set; }
-        public int Hours { get; set; }
-        public int Minutes { get; set; }
-        public int Seconds { get; set; }
+  
         public decimal PriceBefore { get; set; }
         public decimal PriceAfter { get; set; }
     }

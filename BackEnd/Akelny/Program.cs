@@ -6,15 +6,18 @@ using Akelny.BLL.Services.ResturantServices;
 using Akelny.BLL.Services.Reviewservice;
 using Akelny.BLL.Services.SectionServices;
 using Akelny.BLL.Services.SubService;
+using Akelny.BLL.Services.UserService;
 using Akelny.DAL.Context;
 using Akelny.DAL.Models;
 using Akelny.DAL.Repo.CartRepo;
 using Akelny.DAL.Repo.MealRepo;
+using Akelny.DAL.Repo.Meals_Dates_Repo;
 using Akelny.DAL.Repo.PromotionRepo;
 using Akelny.DAL.Repo.ResturantRepo;
 using Akelny.DAL.Repo.ReviewRepo;
 using Akelny.DAL.Repo.SectionRepo;
 using Akelny.DAL.Repo.SubRepo;
+using Akelny.DAL.Repo.UserRepo;
 using Akelny.DAL.UnitOfWork;
 using Akelny.Helper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -42,6 +45,13 @@ namespace Akelny
             var con = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(con));
             //
+            builder.Services.AddCors(policy =>
+            {
+                policy.AddDefaultPolicy(cors =>
+                {
+                    cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
             builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             #endregion
 
@@ -86,6 +96,8 @@ namespace Akelny
             builder.Services.AddScoped<ISectionRepo, SectionRepo>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IMealRepo, MealRepo>();
+            builder.Services.AddScoped<IUserRepo, UserRepo>();
+            builder.Services.AddScoped<IMealsDateRepo, MealsDateRepo>();
             builder.Services.AddScoped<IResturantRepo, ResturantRepo>();
             builder.Services.AddScoped<ISubRepo, SubRepo>();
             builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
@@ -98,6 +110,7 @@ namespace Akelny
             builder.Services.AddScoped<IPromotionServices, PromotionServices>();
             builder.Services.AddScoped<ISectionServices, SectionServices>();
             builder.Services.AddScoped<IMealServices, MealServices>();
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IResturantServices, ResturantServices>();
             builder.Services.AddScoped<ISubService, SubService>();
             builder.Services.AddScoped<IReviewService, ReviewService>();
@@ -125,6 +138,8 @@ namespace Akelny
             app.UseStaticFiles();
 
             app.MapControllers();
+
+            app.UseCors();
 
             app.Run();
             #endregion

@@ -1,78 +1,3 @@
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
@@ -88,3 +13,33 @@ F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akeln
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
+D:\Work\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
+D:\Work\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
+D:\Work\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
+D:\Work\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
+D:\Work\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
+D:\Work\Akelny\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.deps.json
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.BLL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\bin\Debug\net7.0\Akelny.DAL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.AssemblyReference.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfoInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.AssemblyInfo.cs
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CoreCompileInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.csproj.CopyComplete
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\refint\Akelny.BLL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\Akelny.BLL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.BLL\obj\Debug\net7.0\ref\Akelny.BLL.dll

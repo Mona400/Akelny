@@ -13,10 +13,6 @@ namespace Akelny.BLL.Dto.PromotionDto
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public DateTime date { get; set; }
-        public int days { get; set; }
-        public int Hours { get; set; }
-        public int Minutes { get; set; }
-        public int Seconds { get; set; }
         public IFormFile? Image { get; set; }
         public decimal PriceBefore { get; set; }
         public decimal PriceAfter { get; set; }

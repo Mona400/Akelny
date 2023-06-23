@@ -15,37 +15,52 @@ public class CartServices : ICartService
     }
     public void Add(CartToAddDto cartDto)
     {
-        _unitOfWork.CartRepo.Add(new DAL.Models.Cart
+        _unitOfWork.CartRepo.Add(new Cart
         {
-            Discount = cartDto.Discount,
-            MonthlyPrice = cartDto.MonthlyPrice,
-            PaymentDetails = cartDto.PaymentDetails,
-            Meals = cartDto.Meals_dates!.Select(me => new Meals_Dates { MealID = me.Meal_id, Date = me.Arrival_Time }).ToList(),
+            //Discount = cartDto.Discount,
+            //MonthlyPrice = cartDto.MonthlyPrice,
+            //PaymentDetails = cartDto.PaymentDetails,
+            //Meals = cartDto.Meals_dates!.Select(me => new Meals_Dates { MealID = me.Meal_id, Date = me.Arrival_Time }).ToList(),
             UserId = cartDto.UserId
         });
 
         _unitOfWork.CartRepo.SaveChanges();
     }
 
-    public OneCardDto AddMealsToCart(int cartID, List<MealsAndDatesDto> mdto)
+    public OneCardDto? AddMealsToCart(string userID, MealsAndDatesDto mdto)
     {
-        var cart = _unitOfWork.CartRepo.GetCartById(cartID);
+        var cart = _unitOfWork.CartRepo.GetCartByUserId(userID);
 
         if(cart is null) { return null; }
 
-        cart.Meals = mdto.Select(en => new Meals_Dates { Date = en.Arrival_Time, MealID = en.Meal_id }).ToList();
+        cart.Meals!.Add( new Meals_Dates
+        {
+            Date = mdto.Arrival_Time,
+            RestaurantID = mdto.RestID,
+            MealID = mdto.Meal_id,
+            MealImage = mdto.Meal_Img,
+            MealTitle = mdto.Meal_Name,
+            MealPrice = mdto.Meal_Price,
+            RestImg = mdto.RestImg,
+            RestTitle = mdto.RestTitle
+
+        } );
 
         _unitOfWork.CartRepo.SaveChanges();
 
         return new OneCardDto
         {
-            Discount = cart.Discount,
+            Discount = cart.Discount!,
             MonthlyPrice = cart.MonthlyPrice,
             Id = cart.Id,
             Meals = cart.Meals!.Select(en => new MealsAndDatesDto
             {
                 Arrival_Time = en.Date,
-                Meal_id = en.MealID
+                Meal_id = en.MealID,
+                Meal_Name = en.MealTitle,
+                RestID = en.RestaurantID ?? 0,
+                Meal_Price = en.MealPrice,
+                Meal_Img = en.MealImage
 
             }).ToList(),
             PaymentDetails = cart.PaymentDetails,
@@ -91,11 +106,9 @@ public class CartServices : ICartService
         return carts.Select(m => new CartDto
         {
             Id = m.Id,
-            Meals = m.Meals!.Select(en => new MealsAndDatesDto
-            {
-                Meal_id = en.MealID,
-                Arrival_Time = en.Date
-            }).ToList(),
+
+            Meals = m.Meals!.Select(me => new MealsAndDatesDto { Meal_id=me.MealID , Arrival_Time = me.Date}).ToList(),
+
             Discount = m.Discount,
             MonthlyPrice = m.MonthlyPrice,
         
@@ -117,31 +130,67 @@ public class CartServices : ICartService
         }).ToList()  ;
     }
 
-    public OneCardDto? GetById(int id)
+    public OneCardDto? GetById(string userId)
     {
-        Cart? cart = _unitOfWork.CartRepo.GetCartById(id);
+        Cart? cart = _unitOfWork.CartRepo.GetCartByUserId(userId);
 
         if (cart == null) { return null; }
-        var CartDto = new OneCardDto
+        var CartDto = new OneCardDto();
+       
+
+        CartDto.Id = cart.Id;
+        CartDto.Meals = cart.Meals!.Select(me => new MealsAndDatesDto { 
+            Meal_id = me.MealID, 
+            Arrival_Time = me.Date,
+            Meal_Name = me.MealTitle,
+            ID = me.ID,
+            Meal_Img = me.MealImage,
+            RestImg = me.RestImg,
+            RestID = me.RestaurantID ?? 0,
+            RestTitle = me.RestTitle,
+            Meal_Price = me.MealPrice
+        }).ToList();
+        CartDto.Discount = cart.Discount;
+        CartDto.MonthlyPrice = cart.MonthlyPrice;
+        CartDto.PaymentDetails = cart.PaymentDetails;
+        CartDto.UserId = cart.UserId;
+
+           
+
+        
+        
+
+        return CartDto;
+    }
+
+    public OneCardDto? RemoveMealsFromCart(string userID, int mealID)
+    {
+        var cart = _unitOfWork.CartRepo.GetCartByUserId(userID);
+        var meals = _unitOfWork.MealsDateRepo.GetById(mealID);
+        if (cart is null || meals is null) { return null; }
+        cart.Meals!.Remove(meals);
+
+        _unitOfWork.CartRepo.SaveChanges();
+
+        return new OneCardDto
         {
-            Discount = cart.Discount,
+            Discount = cart.Discount!,
             MonthlyPrice = cart.MonthlyPrice,
             Id = cart.Id,
             Meals = cart.Meals!.Select(en => new MealsAndDatesDto
             {
                 Arrival_Time = en.Date,
-                Meal_id = en.MealID
+                Meal_id = en.MealID,
+                Meal_Name = en.MealTitle,
+                RestID = en.RestaurantID ?? 0,
+                Meal_Price = en.MealPrice,
+                Meal_Img = en.MealImage
 
             }).ToList(),
             PaymentDetails = cart.PaymentDetails,
             UserId = cart.UserId,
 
         };
-        
-    
-        return CartDto;
+
     }
-
-
-
 }

@@ -20,9 +20,11 @@ namespace Akelny.DAL.Repo.ResturantRepo
         public Restaurant? GetResturantById(int? ResturantId)
         {
             var restaurant = _context.Restaurant
+              .Where(r => r.Id == ResturantId)
              .Include(m => m.Sections)
              .Include(m => m.Meals)
-             .Where(r => r.Id == ResturantId).FirstOrDefault(r => r.Id == ResturantId);
+             .Include(m => m.Reviews)
+             .FirstOrDefault();
            
             return restaurant;
         }

@@ -27,10 +27,7 @@ namespace Akelny.BLL.Services.PromotionServices
                 Description = PromotionDto.Description,
                 Title = PromotionDto.Title,
                 date = PromotionDto.date,
-                days = PromotionDto.days,
-                Hours = PromotionDto.Hours,
-                Minutes = PromotionDto.Minutes,
-                Seconds = PromotionDto.Seconds,
+               
                 PriceAfter = PromotionDto.PriceAfter,
                 PriceBefore = PromotionDto.PriceBefore,
                 ImageUrl=newName
@@ -62,10 +59,7 @@ namespace Akelny.BLL.Services.PromotionServices
             promotion.Title = promotionDto.Title;
             promotion.Description = promotionDto.Description;
             promotion.date = promotionDto.date;
-            promotion.days = promotionDto.days;
-            promotion.Hours = promotionDto.Hours;
-            promotion.Minutes = promotionDto.Minutes;
-            promotion.Seconds = promotionDto.Seconds;
+          
             promotion.PriceBefore = promotionDto.PriceBefore;
             promotion.PriceAfter = promotionDto.PriceAfter;
             promotion.ImageUrl = newName;
@@ -84,10 +78,8 @@ namespace Akelny.BLL.Services.PromotionServices
                     Description = d.Description,
                     Title= d.Title,
                     date=d.date,
-                    days = d.days,
-                    Hours= d.Hours,
-                    Minutes=d.Minutes,
-                    Seconds= d.Seconds,
+                   
+                    ImageUrl=d.ImageUrl,
                     PriceAfter= d.PriceAfter,
                     PriceBefore= d.PriceBefore,
                  

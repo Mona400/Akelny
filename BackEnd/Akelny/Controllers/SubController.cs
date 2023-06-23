@@ -57,7 +57,7 @@ namespace Akelny.Controllers
             if (foundSub is null) { return BadRequest("No Such Record Was Found"); }
 
             _subService.ChangeState(foundSub, state.substate);
-            return Ok("status was changed successfully");
+            return Ok(new { message = "status was changed successfully" });
         }
 
         [HttpGet]
@@ -104,7 +104,7 @@ namespace Akelny.Controllers
 
             _subService.Delete(foundSub);
 
-            return Ok("record was deleted successfully");
+            return Ok(new { message = "record was deleted successfully" });
 
         }
 
@@ -128,14 +128,16 @@ namespace Akelny.Controllers
 
 
         {
-            var foundSub = _subService.GetSubByIDWithMeals(subID);
+            var foundSub = _subService.GetSubByIDWithMeals(subID , SubDto);
 
             if (foundSub is null) { return BadRequest("No Such Record Was Found"); }
 
-            _subService.AddMeals(foundSub, SubDto);
+            //_subService.AddMeals(foundSub, SubDto);
 
-            return Ok("Meals were added successfully");
+            return Ok(new { message = "Meals were added successfully" });
 
         }
+
+
     }
 }

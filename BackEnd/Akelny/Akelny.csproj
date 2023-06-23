@@ -19,10 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Akelny.BLL\Akelny.BLL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <ProjectReference Include="..\Akelny.DAL\Akelny.DAL.csproj" />
   </ItemGroup>
 
 </Project>

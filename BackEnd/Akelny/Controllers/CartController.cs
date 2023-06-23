@@ -2,7 +2,6 @@
 using Akelny.BLL.Dto.MealDto;
 using Akelny.BLL.Dto.SubDto;
 using Akelny.BLL.Services.CartServices;
-using Akelny.DAL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +21,7 @@ namespace Akelny.Controllers
         {
             _cartService.Add(cartToAddDto);
 
-            return Ok("Added Successfully");
+            return Ok(new { message = "Added Successfully" });
 
         }
 
@@ -31,7 +30,7 @@ namespace Akelny.Controllers
         {
             _cartService.Edit(id, cartToEditDto);
 
-            return Ok("Updated Successfully");
+            return Ok(new { message = "Updated Successfully" });
 
         }
 
@@ -40,17 +39,26 @@ namespace Akelny.Controllers
         {
             _cartService.Delete(id);
 
-            return Ok("Deleted Successfully");
+            return Ok(new { message = "Deleted Successfully" });
 
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GryByID(int id)
+        [HttpGet("{userId}")]
+        public IActionResult GryByID(string userId)
         {
-            var cart = _cartService.GetById(id);
+            var cart = _cartService.GetById(userId);
 
-            if(cart is null) { return NotFound("Card Was'nt found"); }
-            return Ok(cart);
+            if(cart== null) { return NotFound("Cart Doesn't Exists"); }
+            return Ok( new CartDto
+            {
+                Discount = cart.Discount,
+                Id= cart.Id,
+                Meals= cart.Meals,
+                MonthlyPrice= cart.MonthlyPrice,
+                PaymentDetails= cart.PaymentDetails,
+                UserId = cart.UserId
+            });
+
             
 
         }
@@ -66,12 +74,23 @@ namespace Akelny.Controllers
 
         }
 
-        [HttpPatch("AddMeals/{cartID}")]
-        public IActionResult AddMeals(int cartID , List<MealsAndDatesDto> mdto)
+        [HttpPatch("AddMeals/{userID}")]
+        public IActionResult AddMeals(string userID, MealsAndDatesDto mdto)
         {
-            var cart = _cartService.AddMealsToCart(cartID ,mdto);
+            var cart = _cartService.AddMealsToCart(userID, mdto);
 
                 if(cart is null) { return NotFound("Cart not found"); }
+            return Ok(cart);
+
+
+        }
+
+        [HttpDelete("RemoveMeals/{userID}/{meal_id}")]
+        public IActionResult RemoveMeals(string userID, int meal_id)
+        {
+            var cart = _cartService.RemoveMealsFromCart(userID, meal_id);
+
+            if (cart is null) { return NotFound("Cart not found"); }
             return Ok(cart);
 
 

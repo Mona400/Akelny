@@ -73,6 +73,8 @@ namespace Akelny.BLL.Services.MealServices
                     Id = m.Restaurant.Id,
                     Description = m.Restaurant.Description,
                     Rating = m.Restaurant.Rating,
+                    Speciality = m.Restaurant.Speciality,
+                    Image = m.Restaurant.Image!,
                     Title = m.Restaurant.Title
                 } : null,
                 Section = m.Section != null ? new SectionDto

@@ -1,73 +1,3 @@
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
-G:\CV_Project\ITI_GraduationProject\BackEnd\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
-F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\New folder\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
-G:\CV_Project\ITI_GraduationProject\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
-D:\ITI_Projects\GraduationProjectBackendASPN.net\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
@@ -82,3 +12,31 @@ F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akeln
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
 F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\BackEnd\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
+D:\Work\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
+D:\Work\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
+D:\Work\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
+D:\Work\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
+D:\Work\Akelny\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.deps.json
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.runtimeconfig.json
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\bin\Debug\net7.0\Akelny.DAL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.AssemblyReference.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfoInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.AssemblyInfo.cs
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.csproj.CoreCompileInputs.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\refint\Akelny.DAL.dll
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.pdb
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\Akelny.DAL.genruntimeconfig.cache
+F:\College Stuff\System Development ITI\angular\Project_2.0\Akelny\Akelny.DAL\obj\Debug\net7.0\ref\Akelny.DAL.dll

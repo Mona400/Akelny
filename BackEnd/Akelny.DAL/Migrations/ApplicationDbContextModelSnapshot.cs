@@ -31,7 +31,6 @@ namespace Akelny.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Discount")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("MonthlyPrice")
@@ -49,7 +48,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Carts", (string)null);
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Meal", b =>
@@ -96,7 +95,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 1,
                             Description = "Meal Des1",
-                            Image = "",
+                            Image = "test.png",
                             Name = "Meal Name1",
                             Price = 120.2m,
                             RestaurantId = 1,
@@ -106,7 +105,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 2,
                             Description = "Meal Des2",
-                            Image = "",
+                            Image = "test.png",
                             Name = "Meal Name2",
                             Price = 120.2m,
                             RestaurantId = 1,
@@ -116,7 +115,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 3,
                             Description = "Meal Des3",
-                            Image = "",
+                            Image = "test.png",
                             Name = "Meal Name3",
                             Price = 120.2m,
                             RestaurantId = 1,
@@ -143,6 +142,28 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Meal_ID");
 
+                    b.Property<string>("MealImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("MealPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("MealTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestImg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("RestaurantID")
+                        .HasColumnType("int");
+
                     b.Property<int?>("SubscriptionsID")
                         .HasColumnType("int")
                         .HasColumnName("Sub_ID");
@@ -153,9 +174,11 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("MealID");
 
+                    b.HasIndex("RestaurantID");
+
                     b.HasIndex("SubscriptionsID");
 
-                    b.ToTable("Meals_and_Dates", (string)null);
+                    b.ToTable("Meals_and_Dates");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.PaymentDetails", b =>
@@ -176,7 +199,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("VisaNumber");
 
-                    b.ToTable("PaymentDetails", (string)null);
+                    b.ToTable("PaymentDetails");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Promotion", b =>
@@ -191,24 +214,15 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Hours")
-                        .HasColumnType("int");
-
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Minutes")
-                        .HasColumnType("int");
 
                     b.Property<decimal>("PriceAfter")
                         .HasColumnType("decimal(8,2)");
 
                     b.Property<decimal>("PriceBefore")
                         .HasColumnType("decimal(8,2)");
-
-                    b.Property<int>("Seconds")
-                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -217,12 +231,21 @@ namespace Akelny.DAL.Migrations
                     b.Property<DateTime>("date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("days")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Promotions", (string)null);
+                    b.ToTable("Promotions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+                            ImageUrl = "test_sand.jpg",
+                            PriceAfter = 200.99m,
+                            PriceBefore = 259.99m,
+                            Title = "Burger Sandwich",
+                            date = new DateTime(2023, 8, 11, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.RefreshToken", b =>
@@ -259,7 +282,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RefreshTokens", (string)null);
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Restaurant", b =>
@@ -275,7 +298,6 @@ namespace Akelny.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("Rating")
@@ -291,14 +313,14 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Restaurant", (string)null);
+                    b.ToTable("Restaurant");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Description = "Description1",
-                            Image = "",
+                            Image = "507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
                             Rating = 10.2m,
                             Speciality = "Speciality1",
                             Title = "Title1"
@@ -307,7 +329,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 2,
                             Description = "Description2",
-                            Image = "",
+                            Image = "507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
                             Rating = 10.2m,
                             Speciality = "Speciality2",
                             Title = "Title2"
@@ -316,7 +338,7 @@ namespace Akelny.DAL.Migrations
                         {
                             Id = 3,
                             Description = "Description3",
-                            Image = "",
+                            Image = "507a9056-bf91-4616-8036-f8443aaf41d7.jpg",
                             Rating = 10.2m,
                             Speciality = "Speciality3",
                             Title = "Title3"
@@ -339,6 +361,9 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("RestId")
                         .HasColumnType("int");
 
@@ -355,9 +380,11 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RestId");
+
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews", (string)null);
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>
@@ -406,8 +433,18 @@ namespace Akelny.DAL.Migrations
                     b.Property<decimal>("Monthly_Price")
                         .HasColumnType("decimal(9,2)");
 
+                    b.Property<string>("PaymentDetailsVisaNumber")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("RenewDate")
                         .HasColumnType("datetime2(0)");
+
+                    b.Property<int?>("RestaurantID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RestaurantImg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Substate")
                         .HasColumnType("int");
@@ -420,9 +457,11 @@ namespace Akelny.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PaymentDetailsVisaNumber");
+
                     b.HasIndex("TestUserID");
 
-                    b.ToTable("Subscriptions", (string)null);
+                    b.ToTable("Subscriptions");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.User", b =>
@@ -454,6 +493,9 @@ namespace Akelny.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsEmailVerified")
                         .HasColumnType("bit");
 
@@ -483,6 +525,9 @@ namespace Akelny.DAL.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ProfileImg")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -656,7 +701,7 @@ namespace Akelny.DAL.Migrations
 
                     b.HasIndex("SectionsId");
 
-                    b.ToTable("RestaurantSection", (string)null);
+                    b.ToTable("RestaurantSection");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Cart", b =>
@@ -705,31 +750,53 @@ namespace Akelny.DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Akelny.DAL.Models.Restaurant", "Restaurant")
+                        .WithMany()
+                        .HasForeignKey("RestaurantID");
+
                     b.HasOne("Akelny.DAL.Models.Subscriptions", "Subscriptions")
                         .WithMany("Meals_Dates")
-                        .HasForeignKey("SubscriptionsID");
+                        .HasForeignKey("SubscriptionsID")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Cart");
 
                     b.Navigation("Meal");
+
+                    b.Navigation("Restaurant");
 
                     b.Navigation("Subscriptions");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Review", b =>
                 {
+                    b.HasOne("Akelny.DAL.Models.Restaurant", "Restaurant")
+                        .WithMany("Reviews")
+                        .HasForeignKey("RestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Akelny.DAL.Models.User", null)
                         .WithMany("Reviews")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Restaurant");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Subscriptions", b =>
                 {
+                    b.HasOne("Akelny.DAL.Models.PaymentDetails", "PaymentDetails")
+                        .WithMany()
+                        .HasForeignKey("PaymentDetailsVisaNumber");
+
                     b.HasOne("Akelny.DAL.Models.User", "user")
                         .WithMany("subscriptions")
-                        .HasForeignKey("TestUserID");
+                        .HasForeignKey("TestUserID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("PaymentDetails");
 
                     b.Navigation("user");
                 });
@@ -808,6 +875,8 @@ namespace Akelny.DAL.Migrations
             modelBuilder.Entity("Akelny.DAL.Models.Restaurant", b =>
                 {
                     b.Navigation("Meals");
+
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Akelny.DAL.Models.Section", b =>

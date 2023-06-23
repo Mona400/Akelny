@@ -1,6 +1,7 @@
 ﻿using Akelny.BLL.Dto.UserDto;
 using Akelny.DAL.Context;
 using Akelny.DAL.Models;
+using Akelny.DAL.UnitOfWork;
 using Akelny.Helper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -20,11 +21,13 @@ namespace Akelny.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         // private readonly JWT _jWT;
         private readonly IConfiguration _configuration;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly ApplicationDbContext _context;
         private readonly TokenValidationParameters _tokenValidationParameters;
-        public AuthenticationController(UserManager<User> userManager, IConfiguration configuration, ApplicationDbContext context, TokenValidationParameters tokenValidationParameters, RoleManager<IdentityRole> roleManager)
+        public AuthenticationController( IUnitOfWork unitOfWork , UserManager<User> userManager, IConfiguration configuration, ApplicationDbContext context, TokenValidationParameters tokenValidationParameters, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
+            _unitOfWork= unitOfWork;
             _configuration = configuration;
             _context = context;
             _tokenValidationParameters = tokenValidationParameters;
@@ -35,7 +38,7 @@ namespace Akelny.Controllers
         [HttpPost]
         [Route("Register")]
         
-        public async Task<IActionResult> Register([FromBody] UserRegistrationRequestDto userRegistrationRequestDto)
+        public async Task<IActionResult> Register([FromForm] UserRegistrationRequestDto userRegistrationRequestDto)
         {
             //valid the Incomming Request
             if (ModelState.IsValid)
@@ -53,6 +56,8 @@ namespace Akelny.Controllers
                         Result = false
                     });
                 }
+
+                var imageName = _unitOfWork.SaveImageMethod(userRegistrationRequestDto.ProfileImg);
                 //create User
                 var _user = new User
                 {
@@ -62,6 +67,8 @@ namespace Akelny.Controllers
                     FirstName=userRegistrationRequestDto.FirstName,
                     LastName=userRegistrationRequestDto.LastName,
                     DOB=userRegistrationRequestDto.DOB,
+                    ProfileImg=imageName,
+
                     
                 };
                 if(!await _roleManager.RoleExistsAsync(userRegistrationRequestDto.UserType))
@@ -137,7 +144,7 @@ namespace Akelny.Controllers
 
         }
 
-        private async Task<AuthResult> GenerateJwtToken(IdentityUser user)
+        private async Task<AuthResult> GenerateJwtToken(User user)
         {
             var JwtTokenHandler = new JwtSecurityTokenHandler();
             var Key = Encoding.UTF8.GetBytes(_configuration.GetSection(key: "JWTConfig:Secret").Value!);
@@ -178,6 +185,10 @@ namespace Akelny.Controllers
             {
                 Token=jwtToken,
                 RefreshToken=refreshToken.Token,
+                Email = user.Email,
+                UserID = user.Id,
+                Username = user.UserName,
+                ProfileImg = user.ProfileImg,
                 Result=true
             };
 
@@ -189,5 +200,8 @@ namespace Akelny.Controllers
             return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
 
         }
+
+
+
     }
 }

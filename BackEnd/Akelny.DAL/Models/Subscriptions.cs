@@ -19,6 +19,10 @@ namespace Akelny.DAL.Models
 
         public User? user { get; set; }
 
+        [ForeignKey(nameof(Restaurant))]
+        public int? RestaurantID { get; set; }
+
+        public string RestaurantImg { get; set; } = string.Empty;
         public Substate Substate { get; set; }
 
         [Column(TypeName ="decimal(9,2)")]
@@ -29,6 +33,7 @@ namespace Akelny.DAL.Models
         [Column(TypeName = "datetime2(0)")]
         public DateTime RenewDate { get; set; }
 
+        public PaymentDetails? PaymentDetails { get; set; } 
         public ICollection<Meals_Dates>? Meals_Dates { get; set; }
 
     }

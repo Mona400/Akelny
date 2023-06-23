@@ -13,7 +13,7 @@ public class Cart
     [Column(TypeName = "decimal(9,2)")]
     public decimal MonthlyPrice { get; set; }
 
-    public string Discount { get; set; } = string.Empty;
+    public string? Discount { get; set; }
     public ICollection<Meals_Dates>? Meals { get; set; }
     public PaymentDetails? PaymentDetails { get; set; }
 }

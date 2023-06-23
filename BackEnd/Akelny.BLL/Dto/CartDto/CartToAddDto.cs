@@ -16,7 +16,7 @@ public class CartToAddDto
     [Column(TypeName = "decimal(9,2)")]
     public decimal MonthlyPrice { get; set; }
 
-    public string Discount { get; set; } = string.Empty;
+    public string? Discount { get; set; } 
     public ICollection<MealsAndDatesDto>? Meals_dates { get; set; }
     public PaymentDetails? PaymentDetails { get; set; }
 }

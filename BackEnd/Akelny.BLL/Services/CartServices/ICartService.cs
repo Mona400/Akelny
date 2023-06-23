@@ -15,9 +15,11 @@ public interface ICartService
     void Add(CartToAddDto cartDto);
     int? Edit(int id, CartToEditDto cartToEditdto);
     int? Delete(int id);
-    public OneCardDto? GetById(int id);
+    public OneCardDto? GetById(string userId);
 
     public List<MealsAndDatesDto>? GetAllMealByCartID(int cartID);
 
-    public OneCardDto AddMealsToCart(int cartID, List<MealsAndDatesDto> mdto);
+    public OneCardDto? AddMealsToCart(string userID, MealsAndDatesDto mdto);
+
+    public OneCardDto? RemoveMealsFromCart(string userID, int mealID);
 }

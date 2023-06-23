@@ -1,35 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\Akelny.csproj": {}
+    "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\Akelny.csproj": {}
   },
   "projects": {
-    "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
+    "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
+        "projectUniqueName": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
         "projectName": "Akelny.BLL",
-        "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
-        "packagesPath": "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\",
-        "outputPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\obj\\",
+        "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj",
+        "packagesPath": "C:\\Users\\mahmo\\.nuget\\packages\\",
+        "outputPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\COMPU FAYEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
-                "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
+              "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+                "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
               }
             }
           }
@@ -59,29 +59,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+    "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
+        "projectUniqueName": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
         "projectName": "Akelny.DAL",
-        "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
-        "packagesPath": "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\",
-        "outputPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.DAL\\obj\\",
+        "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj",
+        "packagesPath": "C:\\Users\\mahmo\\.nuget\\packages\\",
+        "outputPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\COMPU FAYEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -150,36 +150,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\Akelny.csproj": {
+    "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\Akelny.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
+        "projectUniqueName": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
         "projectName": "Akelny",
-        "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
-        "packagesPath": "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\",
-        "outputPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\obj\\",
+        "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
+        "packagesPath": "C:\\Users\\mahmo\\.nuget\\packages\\",
+        "outputPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\COMPU FAYEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
-                "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj"
+              "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
+                "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj"
+              },
+              "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+                "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
               }
             }
           }
@@ -236,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

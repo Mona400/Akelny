@@ -3,6 +3,7 @@ using Akelny.BLL.Dto.PromotionDto;
 using Akelny.BLL.Dto.ResturantsDto;
 using Akelny.DAL.Models;
 using Akelny.DAL.UnitOfWork;
+    using Akelny.BLL.Dto.ReviewDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,6 +79,7 @@ namespace Akelny.BLL.Services.ResturantServices
                 Id = r.Id,
                 Description = r.Description,
                 Rating = r.Rating,
+
                 Speciality = r.Speciality,
                 Title = r.Title,
                Image=r.Image
@@ -96,7 +98,18 @@ namespace Akelny.BLL.Services.ResturantServices
             resturantDto.Description = restaurant.Description;
             resturantDto.Rating = restaurant.Rating;
             resturantDto.Speciality = restaurant.Speciality;
-            resturantDto.Image = restaurant.Image;
+            resturantDto.Image = restaurant.Image!;
+            resturantDto.Reviews = restaurant.Reviews?.Select(re => new ReviewDto
+            {
+                Comment = re.Comment,
+                Id = re.Id,
+                Impression = re.Impression,
+                RestId = re.RestId,
+                TimeCreated = re.TimeCreated,
+                UserId = re.UserId,
+                UserName = re.UserName,
+                ProfileImg = re.ProfileImg!
+            }).ToList();
             return resturantDto;
         }
     }

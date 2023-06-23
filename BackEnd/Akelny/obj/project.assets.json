@@ -5055,6 +5055,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Akelny.BLL >= 1.0.0",
+      "Akelny.DAL >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.5",
       "Microsoft.AspNetCore.OpenApi >= 7.0.3",
@@ -5063,34 +5064,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\": {}
+    "C:\\Users\\mahmo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
+      "projectUniqueName": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
       "projectName": "Akelny",
-      "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
-      "packagesPath": "C:\\Users\\COMPU FAYEZ\\.nuget\\packages\\",
-      "outputPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny\\obj\\",
+      "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\Akelny.csproj",
+      "packagesPath": "C:\\Users\\mahmo\\.nuget\\packages\\",
+      "outputPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\COMPU FAYEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mahmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://packagesource": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
-              "projectPath": "G:\\CV_Project\\ITI_GraduationProject\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj"
+            "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj": {
+              "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.BLL\\Akelny.BLL.csproj"
+            },
+            "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj": {
+              "projectPath": "F:\\College Stuff\\System Development ITI\\angular\\Project_2.0\\New folder\\Akelny\\BackEnd\\Akelny.DAL\\Akelny.DAL.csproj"
             }
           }
         }
@@ -5147,7 +5151,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

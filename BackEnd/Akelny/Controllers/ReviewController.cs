@@ -20,10 +20,11 @@ public class ReviewController : ControllerBase
 
     }
     [HttpPost]
-    public ActionResult Add(ReviewToAddDto reviewToAddDto)
+    public async Task<ActionResult> Add(ReviewToAddDto reviewToAddDto)
     {
-        _reviewService.Add(reviewToAddDto);
-        return Ok("Review Added Successfully");
+
+       var isSucceeded = await _reviewService.Add(reviewToAddDto);
+        return Ok( new { message = "Review Added Successfully" });
     }
     [HttpPut]
     [Route("{id:int}")]
@@ -32,7 +33,7 @@ public class ReviewController : ControllerBase
 
         var review = _reviewService.Edit(id, reviewToEditDto);
         if (review is null) { return BadRequest(" Review Not Found"); }
-        return Ok("Review updated successfully");
+        return Ok(new { message = "Review updated Successfully" });
 
     }
     [HttpDelete]
@@ -41,7 +42,7 @@ public class ReviewController : ControllerBase
 
         var review = _reviewService.Delete(id);
         if (review is null) { return BadRequest(" Review Not Found"); }
-        return Ok("Review deleted successfully");
+        return Ok(new { message = "Review was deleted Successfully" });
 
     }
 
